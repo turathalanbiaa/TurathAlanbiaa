@@ -1,0 +1,635 @@
+body {
+    direction: rtl;
+    background: #2a2a29;
+    color: white;
+}
+
+.ui.divided.grid:not([class*="vertically divided"])>.column:not(.row),
+.ui.divided.grid:not([class*="vertically divided"])>.row>.column
+{
+    box-shadow: 1px 0 0 0 rgba(255, 255, 255, 0.25);
+}
+
+.ui.divided.grid:not([class*="vertically divided"])>.column:first-child,
+.ui.divided.grid:not([class*="vertically divided"])>.row>.column:first-child {
+    box-shadow: none;
+}
+/****************************NavBar******************************/
+.ui.navbar {
+    width: 100%;
+    height: 500px;
+}
+
+.ui.navbar-content {
+    width: 100%;
+    background-image: url("../img/header-image.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat no-repeat;
+}
+
+.ui.navbar-logo {
+    width: 100%;
+    text-align: center;
+    height: 250px;
+}
+
+.ui.navbar-logo>img {
+    height: 230px;
+    margin: 10px 0;
+}
+
+.ui.navbar-items {
+    width: 100%;
+    height: 250px;
+}
+
+.ui.special.images .image {
+    width: 90px;
+    height: 60px;
+    margin: 10px 25px 45px 25px;
+}
+
+.ui.special.images img {
+    width: 60px;
+    height: 60px;
+}
+
+.ui.special.images img {
+    margin: 0 0;
+}
+
+.ui.special.images p {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #fafafa;
+}
+
+.ui.special.images p:hover {
+    color: #8de87c;
+}
+
+/****************************Sections Line******************************/
+.ui.section-line.grid {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.special-divider {
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.8);
+}
+/****************************Sections Event******************************/
+.ui.section-news.grid,
+.ui.section-activity.grid,
+.ui.section-student.grid,
+.ui.section-application-releases.grid,
+.ui.section-faq-masael.grid,
+.ui.section-qamer-center.grid,
+.ui.section-footer.grid {
+    background-size: 100% 100%;
+    background-repeat: no-repeat no-repeat;
+    background-attachment: scroll;
+}
+
+.ui.section-news.grid {
+    background-image: url("../img/section-header.png");
+}
+
+.ui.section-application-releases.grid {
+    background-image: url("../img/section-black.png");
+}
+
+.ui.section-activity.grid,
+.ui.section-faq-masael.grid {
+    background-image: url("../img/section-light-green.png");
+}
+
+.ui.section-student.grid,
+.ui.section-qamer-center.grid {
+    background-image: url("../img/section-dark-green.png");
+}
+
+.ui.section-footer.grid {
+    background-image: url("../img/section-footer.png");
+}
+
+fieldset {
+    margin: 15px 10px 35px 10px;
+    border-radius: 7px;
+    padding-bottom: 20px;
+    min-width: 0;
+    border-color: rgba(255, 255, 255, 0.90);
+}
+
+.section-application-releases fieldset,
+.section-faq-masael fieldset {
+    margin: 15px 0 35px 0;
+}
+
+fieldset.releases,
+fieldset.faq {
+    margin-right: 10px !important;
+}
+
+fieldset.application,
+fieldset.masael {
+    margin-left: 10px !important;
+}
+
+fieldset.footer {
+    margin: 10px 10px 0 10px !important;
+}
+
+legend {
+    padding: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.section-application-releases legend,
+.section-faq-masael legend,
+.section-footer legend {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section-footer legend {
+    color: #292929;
+}
+
+.ui.news.grid,
+.ui.activity.grid,
+.ui.student.grid,
+.ui.qamer-center.grid,
+.ui.footer.grid {
+    padding: 10px 5px 5px 5px;
+}
+
+.ui.releases.grid,
+.ui.application.grid,
+.ui.faq.grid,
+.ui.masael.grid {
+    padding: 5px;
+}
+
+.ui.card>.image,
+.ui.card>.image>img
+{
+    height: 175px;
+}
+
+.ui.card>.content {
+    padding: 10px;
+}
+
+.ellipsis {
+    font-size: 14px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+fieldset.application h4,
+fieldset.releases h4{
+    margin:0 4px 15px 4px !important;
+}
+
+.google-play-button,
+.app-store-button {
+    width: 70px;
+    height: 30px;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    background-size: 100% 100%;
+    background-repeat: no-repeat no-repeat;
+    background-attachment: scroll;
+}
+
+.google-play-button {
+    background-image: url("../img/google-play.png");
+}
+
+.app-store-button {
+    background-image: url("../img/app-store.png");
+}
+
+.google-play-button:hover,
+.app-store-button:hover {
+    cursor: pointer;
+}
+
+.section-faq-masael .faq .segment,
+.section-faq-masael .masael .segment {
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.section-faq-masael .faq .segment::-webkit-scrollbar,
+.section-faq-masael .masael .segment::-webkit-scrollbar {
+    width: 5px;
+}
+
+.faq .question,
+.masael .question {
+    font-size: 16px;
+    font-weight: bold;
+    color: #00b5ad;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.faq .answer,
+.masael .answer {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: justify;
+    color: #292929;
+}
+
+.section-news-button,
+.section-activity-button,
+.section-student-button,
+.section-releases-button,
+.section-application-button,
+.section-faq-button,
+.section-masael-button,
+.section-qamer-center-button {
+    width: 50%;
+    left: 25%;
+    position: absolute;
+    height: 40px;
+    bottom: 30px;
+    text-align: center;
+    z-index: 1;
+}
+
+.section-news-button>.ui.inverted.basic.button,
+.section-activity-button>.ui.inverted.basic.button,
+.section-student-button>.ui.inverted.basic.button,
+.section-releases-button>.ui.inverted.basic.button,
+.section-application-button>.ui.inverted.basic.button,
+.section-faq-button>.ui.inverted.basic.button,
+.section-masael-button>.ui.inverted.basic.button,
+.section-qamer-center-button>.ui.inverted.basic.button {
+    margin: 6px 0 0 0 !important;
+}
+
+.section-news-button>.ui.inverted.basic.button,
+.section-releases-button>.ui.inverted.basic.button,
+.section-application-button>.ui.inverted.basic.button {
+    background-color: #3c3c3b !important;
+}
+
+.section-activity-button>.ui.inverted.basic.button,
+.section-faq-button>.ui.inverted.basic.button,
+.section-masael-button>.ui.inverted.basic.button {
+    background-color: #77ba58 !important;
+}
+
+.section-student-button>.ui.inverted.basic.button,
+.section-qamer-center-button>.ui.inverted.basic.button {
+    background-color: #387c57 !important;
+}
+
+.footer .ui.button {
+    margin: 0 !important;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.footer .icon {
+    margin: 0 !important;
+}
+
+/****************************News and Activities******************************/
+.ui.all-news.grid,
+.ui.all-activity.grid,
+.ui.all-qamer-center-activity.grid {
+    background-color: #3c3c3b;
+}
+
+.all-news .cards>.card>.content>.header,
+.all-activity .cards>.card>.content>.header,
+.all-qamer-center-activity .cards>.card>.content>.header {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.all-news .one.cards>.card>.content>.header,
+.all-activity .one.cards>.card>.content>.header,
+.all-qamer-center-activity .one.cards>.card>.content>.header{
+    white-space: normal;
+    text-overflow: clip;
+    overflow: visible;
+    text-align: justify;
+}
+
+.all-news .cards>.card>.content>.description,
+.all-activity .cards>.card>.content>.description,
+.all-qamer-center-activity .cards>.card>.content>.description {
+    font-size: 15px;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.all-news .cards>.card>.content::after,
+.all-activity .cards>.card>.content::after,
+.all-qamer-center-activity .cards>.card>.content::after {
+    content: ". . .";
+    color: rgba(0,0,0,.68);
+    width: 30px;
+    height: 15px;
+    text-align: right;
+    margin-top: -2px;
+    padding-right: 2px;
+    background-color: white;
+    overflow: visible;
+    visibility: visible;
+    line-height: 3px;
+    font-size: 20px;
+    position: absolute;
+    left: 14px;
+    bottom: 55px;
+}
+
+.all-news .cards>.card>.extra.content::after,
+.all-activity .cards>.card>.extra.content::after,
+.all-qamer-center-activity .cards>.card>.extra.content::after {
+    display: block;
+    content: ' ';
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.all-news p.line {
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.all-news p.line::after {
+    content: ".";
+}
+
+.ui.thumbnail.image {
+    border: 1px solid #ddd;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.ui.news.link.list .item {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 0;
+    border-bottom:1px solid rgba(250, 128, 115, 0.91);
+}
+
+.ui.news.link.list a.item:hover {
+    color: white;
+}
+
+.page {
+    color: white;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.page:hover {
+    font-weight: bold;
+    color: rgba(250, 128, 115, 0.91);
+}
+/********************************************************************/
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    /****************************NavBar******************************/
+    .ui.navbar {
+        height: 400px;
+    }
+
+    .ui.navbar-logo {
+        height: 200px;
+    }
+
+    .ui.navbar-logo>img {
+        height: 180px;
+        margin: 10px 0 0 0;
+    }
+
+    .ui.navbar-items {
+        height: 200px;
+    }
+
+    .ui.navbar-items>.container>.grid {
+        margin: 10px 0 0 0;
+    }
+
+    .ui.special.images .image {
+        width: 75px;
+        height: 40px;
+        margin: 10px 20px 40px 20px;
+    }
+
+    .ui.special.images img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ui.special.images p {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    /****************************Sections Event******************************/
+    legend {
+        font-size: 16px !important;
+        font-weight: bold !important;
+    }
+
+    fieldset.application h4,
+    fieldset.releases h4{
+        margin:0 4px 10px 4px !important;
+    }
+
+    .google-play-button {
+        margin-bottom: 5px;
+    }
+
+    .faq .question,
+    .faq .answer,
+    .masael .question,
+    .masael .answer {
+        font-size: 14px;
+    }
+
+    .footer .ui.button {
+        font-size: 25px;
+    }
+
+    /****************************News and Activities******************************/
+    .all-news .cards>.card>.content>.header,
+    .all-activity .cards>.card>.content>.header,
+    .all-qamer-center-activity .cards>.card>.content>.header {
+        font-size: 16px !important;
+    }
+
+    .all-news .cards>.card>.content>.description,
+    .all-activity .cards>.card>.content>.description,
+    .all-qamer-center-activity .cards>.card>.content>.description {
+        font-size: 14px;
+    }
+
+    .all-news p.line {
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /****************************NavBar******************************/
+    .ui.navbar {
+        height: 250px;
+    }
+
+    .ui.navbar-logo {
+        height: 125px;
+    }
+
+    .ui.navbar-logo>img {
+        height: 105px;
+        margin: 10px 0 0 0;
+    }
+
+    .ui.navbar-items {
+        height: 125px;
+    }
+
+    .ui.navbar-items>.container {
+        padding: 0 !important;
+    }
+
+    .ui.navbar-items>.container>.grid {
+        margin-top: 5px;
+    }
+
+    .ui.special.images .image {
+        width: 56px;
+        height: 25px;
+        margin: 0 4px 40px 4px;
+    }
+
+    .ui.special.images img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .ui.special.images p {
+        font-size: 9px;
+        font-weight: bolder;
+    }
+
+    /****************************Sections Line******************************/
+    .ui.section-line.grid {
+        margin-top: 10px;
+    }
+
+    /****************************Sections Event******************************/
+    fieldset{
+        margin: 15px 10px 35px 10px !important;
+    }
+
+    legend {
+        font-size: 14px !important;
+        font-weight: bold !important;
+    }
+
+    .ui.card>.image,
+    .ui.card>.image>img
+    {
+        height: 160px;
+    }
+
+    .ellipsis {
+        font-size: 12px !important;
+        font-weight: normal;
+    }
+
+    .footer .ui.button {
+        font-size: 20px;
+    }
+
+    /****************************News and Activities******************************/
+    .all-news .cards>.card>.content>.header,
+    .all-activity .cards>.card>.content>.header,
+    .all-qamer-center-activity .cards>.card>.content>.header {
+        font-size: 16px !important;
+    }
+
+    .all-news .cards>.card>.content>.description,
+    .all-activity .cards>.card>.content>.description,
+    .all-qamer-center-activity .cards>.card>.content>.description {
+        font-size: 14px;
+    }
+
+    .all-news p.line {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width: 400px) and (min-width: 321px) {
+    /****************************NavBar******************************/
+    .ui.special.images .image {
+        width: 50px;
+        height: 25px;
+        margin: 0 3px 40px 3px;
+    }
+
+    .ui.special.images img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .ui.special.images p {
+        font-size: 7px;
+        font-weight: bolder;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    /****************************NavBar******************************/
+    .ui.navbar-items>.container {
+        padding: 0 !important
+    }
+
+    .ui.navbar-items>.container>.grid {
+        margin-top: -1rem;
+    }
+
+    .ui.special.images .image {
+        width: 48px;
+        height: 20px;
+        margin: 0 0 40px 0;
+    }
+
+    .ui.special.images img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .ui.special.images p {
+        font-size: 7px;
+        font-weight: bolder;
+    }
+}
