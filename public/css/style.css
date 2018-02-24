@@ -307,7 +307,7 @@ fieldset.releases h4{
     margin: 0 !important;
 }
 
-/****************************News and Activities******************************/
+/****************************News, Activities And QC-Activity ******************************/
 .ui.all-news.grid,
 .ui.all-activity.grid,
 .ui.all-qamer-center-activity.grid {
@@ -373,13 +373,17 @@ fieldset.releases h4{
     visibility: hidden;
 }
 
-.all-news p.line {
+.all-news p.line,
+.all-activities p.line
+.all-qamer-center-activities p.line {
     text-align: justify;
     font-size: 18px;
     font-weight: 400;
 }
 
-.all-news p.line::after {
+.all-news p.line::after,
+.all-activities p.line::after,
+.all-qamer-center-activities p.line::after {
     content: ".";
 }
 
@@ -389,7 +393,9 @@ fieldset.releases h4{
     cursor: pointer;
 }
 
-.ui.news.link.list .item {
+.ui.news.link.list .item,
+.ui.activities.link.list .item,
+.ui.qamer-center-activities.link.list .item {
     color: rgba(255, 255, 255, 0.85);
     font-size: 15px;
     font-weight: bold;
@@ -397,7 +403,9 @@ fieldset.releases h4{
     border-bottom:1px solid rgba(250, 128, 115, 0.91);
 }
 
-.ui.news.link.list a.item:hover {
+.ui.news.link.list a.item:hover,
+.ui.activities.link.list a.item:hover,
+.ui.qamer-center-activities.link.list a.item:hover{
     color: white;
 }
 
@@ -477,7 +485,7 @@ fieldset.releases h4{
         font-size: 25px;
     }
 
-    /****************************News and Activities******************************/
+    /****************************News, Activities And QC-Activity ******************************/
     .all-news .cards>.card>.content>.header,
     .all-activity .cards>.card>.content>.header,
     .all-qamer-center-activity .cards>.card>.content>.header {
@@ -490,7 +498,9 @@ fieldset.releases h4{
         font-size: 14px;
     }
 
-    .all-news p.line {
+    .all-news p.line,
+    .all-activities p.line,
+    .all-qamer-center-activities p.line {
         font-size: 15px;
         font-weight: 500;
     }
@@ -569,7 +579,7 @@ fieldset.releases h4{
         font-size: 20px;
     }
 
-    /****************************News and Activities******************************/
+    /****************************News, Activities And QC-Activity ******************************/
     .all-news .cards>.card>.content>.header,
     .all-activity .cards>.card>.content>.header,
     .all-qamer-center-activity .cards>.card>.content>.header {
@@ -582,7 +592,9 @@ fieldset.releases h4{
         font-size: 14px;
     }
 
-    .all-news p.line {
+    .all-news p.line,
+    .all-activities p.line,
+    .all-qamer-center-activities p.line {
         font-size: 14px;
         font-weight: 400;
     }

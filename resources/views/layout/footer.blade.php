@@ -1,7 +1,7 @@
 <style>
     .ui.footer.grid {
         background-color: #eaeaea;
-        margin-top: 25px;
+        margin-top: 15px;
         padding-top: 50px;
         padding-bottom: 50px;
     }

@@ -36,13 +36,17 @@ class QamerCenterActivityController extends Controller
     public function singleActivity()
     {
         $id = Input::get("id");
-        $singleActivity = Events::where("id", $id)
+        $activity = Events::where("id", $id)
             ->where("type", EventType::QAMER_CENTER_ACTIVITIES)
             ->firstOrfail();
 
-        self::addViewToActivity($singleActivity->id);
+        self::addViewToActivity($activity->id);
 
-        dd($singleActivity);
+        $allActivities = Events::where("type", EventType::QAMER_CENTER_ACTIVITIES)
+            ->orderBy("date","DESC")
+            ->paginate(12);
+
+        return view("qamerCenterActivity.singleQamerCenterActivity")->with(["activity"=>$activity,"allActivities"=>$allActivities]);
     }
 
     public static function addViewToActivity($id)

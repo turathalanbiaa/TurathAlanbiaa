@@ -35,13 +35,17 @@ class ActivityController extends Controller
     public function singleActivity()
     {
         $id = Input::get("id");
-        $singleActivity = Events::where("id", $id)
+        $activity = Events::where("id", $id)
             ->where("type", EventType::ACTIVITIES)
             ->firstOrfail();
 
-        self::addViewToActivity($singleActivity->id);
+        self::addViewToActivity($activity->id);
 
-        dd($singleActivity);
+        $allActivities = Events::where("type", EventType::ACTIVITIES)
+            ->orderBy("date","DESC")
+            ->paginate(12);
+
+        return view("activity.singleActivity")->with(["activity"=>$activity,"allActivities"=>$allActivities]);
     }
 
     public static function addViewToActivity($id)
