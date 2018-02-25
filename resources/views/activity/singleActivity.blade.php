@@ -35,7 +35,7 @@
                                     <a class="ui left corner label" onclick="$('.ui.modal').modal('show');">
                                         <i class="zoom black icon"></i>
                                     </a>
-                                    <img src="{{asset("/img/news1.png")}}">
+                                    <img src="{{asset("/img/news1.png")}}" >
                                 </div>
 
                                 <?php $lines = explode(".",$activity->content); ?>

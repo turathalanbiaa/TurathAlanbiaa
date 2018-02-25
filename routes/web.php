@@ -25,7 +25,9 @@ Route::get("/qc-activity",'QamerCenterActivityController@singleActivity');
 
 
 
-
+/*********************************************/
+Route::get("/all-applications",'ApplicationController@applications');
+Route::get("/application",'ApplicationController@singleApplication');
 
 
 
@@ -37,15 +39,6 @@ Route::get("/qc-activity",'QamerCenterActivityController@singleActivity');
 /*********************************************/
 Route::get("/all-releases",'ReleaseController@releases');
 Route::get("/release",'ReleaseController@singleRelease');
-
-
-/*********************************************/
-Route::get("/all-applications",'ApplicationController@applications');
-Route::get("/application",'ApplicationController@singleApplication');
-
-
-
-
 
 /*********************************************/
 Route::get("/studio",'StudioController@index');

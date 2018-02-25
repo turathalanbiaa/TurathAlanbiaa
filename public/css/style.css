@@ -373,8 +373,9 @@ fieldset.releases h4{
     visibility: hidden;
 }
 
+/****************************Single News, Single Activity And Single QC-Activity ******************************/
 .all-news p.line,
-.all-activities p.line
+.all-activities p.line,
 .all-qamer-center-activities p.line {
     text-align: justify;
     font-size: 18px;
@@ -419,6 +420,117 @@ fieldset.releases h4{
     font-weight: bold;
     color: rgba(250, 128, 115, 0.91);
 }
+
+/****************************Applications******************************/
+.ui.all-application.grid {
+    background-color: #3c3c3b;
+}
+
+.application.card {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+     box-shadow: none;
+}
+
+.application.card>.content {
+    background-image: url("../img/card.jpg");
+    background-size: 100% 100%;
+    display: inline-flex;
+}
+
+.application.card>.content>.app.logo {
+    width: 40%;
+    height: auto;
+    background-color: transparent;
+    text-align: center;
+    padding: 10px 0 40px 0;
+}
+
+.application.card>.content>.app.logo>img {
+    width: 125px;
+    height: 125px;
+}
+
+.application.card>.content>.app.description {
+    width: 60%;
+    height: auto;
+    background-color: transparent;
+    text-align: right;
+    padding: 10px 0 10px 10px;
+}
+
+.application.card>.content>.app.description .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.application.card>.content>.app.description .detail {
+    font-size: 15px;
+    font-weight: 700;
+    overflow: hidden;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.application.card>.footer {
+    background-color: transparent;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.application.card>.footer>.text {
+    width: 60%;
+    background-color: #00b6b9;
+    padding: 14px;
+}
+
+.application.card>.footer>.app.buttons {
+    display: inline-flex;
+    width: 40%;
+    background-color: transparent;
+}
+
+.application.card>.footer>.app.buttons>.button {
+    width: 33.333%;
+    padding: 14px;
+    text-align: center;
+}
+
+.application.card>.footer>.app.buttons>.info.button {
+    background-color: #f04057;
+}
+
+.application.card>.footer>.app.buttons>.google.play.button {
+    background-color: #f37042;
+}
+
+.application.card>.footer>.app.buttons>.apple.store.button {
+    background-color: #fdb813;
+}
+
+.application.card>.footer>.app.buttons>.google.play.button>a,
+.application.card>.footer>.app.buttons>.apple.store.button>a,
+.application.card>.footer>.app.buttons>.info.button>a {
+    font-size: 24px;
+    color: white;
+}
+
+.application.card>.footer>.app.buttons>.info.button>a:hover {
+    color: #00b6b9;
+}
+
+.application.card>.footer>.app.buttons>.google.play.button>a:hover {
+    color: #fdb813;
+}
+
+.application.card>.footer>.app.buttons>.apple.store.button>a:hover {
+    color: #f37042;
+}
+
 /********************************************************************/
 @media only screen and (max-width: 991px) and (min-width: 768px) {
     /****************************NavBar******************************/
@@ -498,11 +610,38 @@ fieldset.releases h4{
         font-size: 14px;
     }
 
+    /****************************Single News, Single Activity And Single QC-Activity ******************************/
     .all-news p.line,
     .all-activities p.line,
     .all-qamer-center-activities p.line {
         font-size: 15px;
         font-weight: 500;
+    }
+
+    /****************************Applications******************************/
+    .application.card>.content>.app.logo
+    {
+        padding: 10px 0 10px 0;
+    }
+
+    .application.card>.content>.app.description {
+        padding: 10px 0 10px 5px;
+    }
+
+    .application.card>.content>.app.description .title {
+        margin-bottom: 5px;
+    }
+
+    .application.card>.content>.app.description .detail {
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: 600;
+        -webkit-line-clamp: 3;
+    }
+
+    .application.card>.content>.app.logo>img {
+        width: 95px;
+        height: 95px;
     }
 }
 
@@ -592,9 +731,38 @@ fieldset.releases h4{
         font-size: 14px;
     }
 
+    /****************************Single News, Single Activity And Single QC-Activity ******************************/
     .all-news p.line,
     .all-activities p.line,
     .all-qamer-center-activities p.line {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    /****************************Applications******************************/
+    .application.card>.content>.app.logo {
+        width: 37%;
+        padding: 10px 0 40px 0;
+    }
+
+    .application.card>.content>.app.logo>img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .application.card>.content>.app.description {
+        width: 63%;
+        padding: 10px 0 10px 0;
+    }
+
+    .application.card>.content>.app.description .title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .application.card>.content>.app.description .detail {
+        -webkit-line-clamp: 4;
         font-size: 14px;
         font-weight: 400;
     }
@@ -617,6 +785,7 @@ fieldset.releases h4{
         font-size: 7px;
         font-weight: bolder;
     }
+
 }
 
 @media only screen and (max-width: 320px) {
