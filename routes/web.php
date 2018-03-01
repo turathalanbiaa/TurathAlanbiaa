@@ -5,13 +5,13 @@
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
+| Here is where you can register web routes for your applications. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
 */
 
-Route::get("/",'MainController@index');
+Route::get("/",'Website\\MainController@index');
 /*********************************************/
 Route::get("/all-news",'NewsController@news');
 Route::get("/news",'NewsController@singleNews');
@@ -26,8 +26,8 @@ Route::get("/qc-activity",'QamerCenterActivityController@singleActivity');
 
 
 /*********************************************/
-Route::get("/all-applications",'ApplicationController@applications');
-Route::get("/application",'ApplicationController@singleApplication');
+Route::get("/applications",'ApplicationController@applications');
+Route::get("/application",'ApplicationController@application');
 
 
 

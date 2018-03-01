@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Website;
 
 use App\Enum\EventType;
+use App\Http\Controllers\Controller;
 use App\Models\Events;
 use App\Models\FAQ;
 use App\Models\Masael;
 use App\Models\SpecialStudents;
-use Illuminate\Http\Request;
 
 class MainController extends Controller
 {

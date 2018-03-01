@@ -29,7 +29,7 @@ class RouteServiceProvider extends ServiceProvider
     }
 
     /**
-     * Define the routes for the application.
+     * Define the routes for the applications.
      *
      * @return void
      */
@@ -43,7 +43,7 @@ class RouteServiceProvider extends ServiceProvider
     }
 
     /**
-     * Define the "web" routes for the application.
+     * Define the "web" routes for the applications.
      *
      * These routes all receive session state, CSRF protection, etc.
      *
@@ -57,7 +57,7 @@ class RouteServiceProvider extends ServiceProvider
     }
 
     /**
-     * Define the "api" routes for the application.
+     * Define the "api" routes for the applications.
      *
      * These routes are typically stateless.
      *

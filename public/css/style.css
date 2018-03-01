@@ -422,7 +422,7 @@ fieldset.releases h4{
 }
 
 /****************************Applications******************************/
-.ui.all-application.grid {
+.ui.applications.grid {
     background-color: #3c3c3b;
 }
 
@@ -484,7 +484,8 @@ fieldset.releases h4{
 
 .application.card>.footer>.text {
     width: 60%;
-    background-color: #00b6b9;
+    /*background-color: #00b6b9;*/
+    background-color: #309b5c;
     padding: 14px;
 }
 
@@ -501,15 +502,18 @@ fieldset.releases h4{
 }
 
 .application.card>.footer>.app.buttons>.info.button {
-    background-color: #f04057;
+    /*background-color: #f04057;*/
+    background-color: #5f5d5f;
 }
 
 .application.card>.footer>.app.buttons>.google.play.button {
-    background-color: #f37042;
+    /*background-color: #f37042;*/
+    background-color: #8ea639;
 }
 
 .application.card>.footer>.app.buttons>.apple.store.button {
-    background-color: #fdb813;
+    /*background-color: #fdb813;*/
+    background-color: #dcc812;
 }
 
 .application.card>.footer>.app.buttons>.google.play.button>a,
@@ -520,17 +524,35 @@ fieldset.releases h4{
 }
 
 .application.card>.footer>.app.buttons>.info.button>a:hover {
-    color: #00b6b9;
+    /*color: #00b6b9;*/
+    color: #309b5c;
 }
 
 .application.card>.footer>.app.buttons>.google.play.button>a:hover {
-    color: #fdb813;
+    /*color: #fdb813;*/
+    color: #dcc812;
 }
 
 .application.card>.footer>.app.buttons>.apple.store.button>a:hover {
-    color: #f37042;
+    /*color: #f37042;*/
+    color: #8ea639;
 }
 
+/****************************Application******************************/
+.ui.application.grid {
+    background-color: #3c3c3b;
+}
+
+.application .special.button {
+    padding: 0;
+    background-color: transparent;
+}
+
+.application .special.button:hover {
+    box-shadow: 2px 2px 10px 3px #211d14;
+}
+/********************************************************************/
+/*****************Max-Width:991px And Min-Width:768px****************/
 /********************************************************************/
 @media only screen and (max-width: 991px) and (min-width: 768px) {
     /****************************NavBar******************************/
@@ -624,6 +646,11 @@ fieldset.releases h4{
         padding: 10px 0 10px 0;
     }
 
+    .application.card>.content>.app.logo>img {
+        width: 95px;
+        height: 95px;
+    }
+
     .application.card>.content>.app.description {
         padding: 10px 0 10px 5px;
     }
@@ -639,12 +666,25 @@ fieldset.releases h4{
         -webkit-line-clamp: 3;
     }
 
-    .application.card>.content>.app.logo>img {
-        width: 95px;
-        height: 95px;
+    .application.card>.footer>.text {
+        width: 55%;
+    }
+
+    .application.card>.footer>.app.buttons {
+        width: 45%;
+    }
+
+    .application.card>.footer>.app.buttons>.google.play.button>a,
+    .application.card>.footer>.app.buttons>.apple.store.button>a,
+    .application.card>.footer>.app.buttons>.info.button>a {
+        font-size: 22px;
     }
 }
+/********************************************************************/
 
+/********************************************************************/
+/*********************Max-Width:767px********************************/
+/********************************************************************/
 @media only screen and (max-width: 767px) {
     /****************************NavBar******************************/
     .ui.navbar {
@@ -766,8 +806,26 @@ fieldset.releases h4{
         font-size: 14px;
         font-weight: 400;
     }
-}
 
+    .application.card>.footer>.text {
+        width: 55%;
+    }
+
+    .application.card>.footer>.app.buttons {
+        width: 45%;
+    }
+
+    .application.card>.footer>.app.buttons>.google.play.button>a,
+    .application.card>.footer>.app.buttons>.apple.store.button>a,
+    .application.card>.footer>.app.buttons>.info.button>a {
+        font-size: 20px;
+    }
+}
+/********************************************************************/
+
+/********************************************************************/
+/*****************Max-Width:400px And Min-Width:321px****************/
+/********************************************************************/
 @media only screen and (max-width: 400px) and (min-width: 321px) {
     /****************************NavBar******************************/
     .ui.special.images .image {
@@ -787,7 +845,11 @@ fieldset.releases h4{
     }
 
 }
+/********************************************************************/
 
+/********************************************************************/
+/*********************Max-Width:320px********************************/
+/********************************************************************/
 @media only screen and (max-width: 320px) {
     /****************************NavBar******************************/
     .ui.navbar-items>.container {
@@ -813,4 +875,25 @@ fieldset.releases h4{
         font-size: 7px;
         font-weight: bolder;
     }
+
+    /****************************Applications******************************/
+    .application.card>.footer>.text {
+        width: 50%;
+        font-size: 14px;
+    }
+
+    .application.card>.footer>.app.buttons {
+        width: 50%;
+    }
+
+    .application.card>.footer>.app.buttons>.button {
+        padding: 14px 12px;
+    }
+
+    .application.card>.footer>.app.buttons>.google.play.button>a,
+    .application.card>.footer>.app.buttons>.apple.store.button>a,
+    .application.card>.footer>.app.buttons>.info.button>a {
+        font-size: 20px;
+    }
 }
+/********************************************************************/

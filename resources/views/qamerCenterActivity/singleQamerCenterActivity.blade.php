@@ -26,8 +26,8 @@
                                     </div>
                                 </h2>
 
-                                @if(!is_null($activity->youtubeVideoId))
-                                    <div class="ui embed" data-source="youtube" data-id="{{$activity->youtubeVideoId}}" data-placeholder="{{asset("/img/news1.png")}}" data-icon="ui play video icon"></div>
+                                @if(!is_null($activity->videoLink))
+                                    <div class="ui embed" data-url="{{$activity->videoLink}}" data-placeholder="{{asset("/img/news1.png")}}" data-icon="ui play video icon"></div>
                                     <div class="ui divider"></div>
                                 @endif
 

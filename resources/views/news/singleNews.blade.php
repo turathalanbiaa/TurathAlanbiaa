@@ -26,8 +26,8 @@
                                     </div>
                                 </h2>
 
-                                @if(!is_null($news->youtubeVideoId))
-                                    <div class="ui embed" data-source="youtube" data-id="{{$news->youtubeVideoId}}" data-placeholder="{{asset("/img/news1.png")}}" data-icon="ui play video icon"></div>
+                                @if(!is_null($news->videoLink))
+                                    <div class="ui embed" data-url="{{$news->videoLink}}" data-placeholder="{{asset("/img/news1.png")}}" data-icon="ui play video icon"></div>
                                     <div class="ui divider"></div>
                                 @endif
 

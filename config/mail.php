@@ -9,7 +9,7 @@ return [
     |
     | Laravel supports both SMTP and PHP's "mail" function as drivers for the
     | sending of e-mail. You may specify which one you're using throughout
-    | your application here. By default, Laravel is setup for SMTP mail.
+    | your applications here. By default, Laravel is setup for SMTP mail.
     |
     | Supported: "smtp", "sendmail", "mailgun", "mandrill", "ses",
     |            "sparkpost", "log", "array"
@@ -36,9 +36,9 @@ return [
     | SMTP Host Port
     |--------------------------------------------------------------------------
     |
-    | This is the SMTP port used by your application to deliver e-mails to
-    | users of the application. Like the host we have set this value to
-    | stay compatible with the Mailgun e-mail application by default.
+    | This is the SMTP port used by your applications to deliver e-mails to
+    | users of the applications. Like the host we have set this value to
+    | stay compatible with the Mailgun e-mail applications by default.
     |
     */
 
@@ -49,9 +49,9 @@ return [
     | Global "From" Address
     |--------------------------------------------------------------------------
     |
-    | You may wish for all e-mails sent by your application to be sent from
+    | You may wish for all e-mails sent by your applications to be sent from
     | the same address. Here, you may specify a name and address that is
-    | used globally for all e-mails that are sent by your application.
+    | used globally for all e-mails that are sent by your applications.
     |
     */
 
@@ -66,7 +66,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Here you may specify the encryption protocol that should be used when
-    | the application send e-mail messages. A sensible default using the
+    | the applications send e-mail messages. A sensible default using the
     | transport layer security protocol should provide great security.
     |
     */

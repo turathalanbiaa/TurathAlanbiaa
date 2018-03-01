@@ -8,7 +8,7 @@ use Illuminate\Contracts\Console\Kernel;
 trait CreatesApplication
 {
     /**
-     * Creates the application.
+     * Creates the applications.
      *
      * @return \Illuminate\Foundation\Application
      */

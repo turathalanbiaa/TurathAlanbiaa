@@ -12,7 +12,7 @@
             <div class="special-divider"></div>
         </div>
 
-        <div class="ui all-application grid">
+        <div class="ui applications grid">
             @foreach($applications as $application)
                 <div class="sixteen wide mobile eight wide tablet eight wide computer column">
                     <div class="ui application fluid card">
@@ -34,7 +34,7 @@
 
                             <div class="app buttons">
                                 <div class="info button">
-                                    <a href=""><i class="info icon"></i></a>
+                                    <a href="/application?id={{$application->id}}"><i class="info icon"></i></a>
                                 </div>
 
                                 <div class="google play button">
