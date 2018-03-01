@@ -12,23 +12,18 @@
 */
 
 Route::get("/",'Website\\MainController@index');
-/*********************************************/
-Route::get("/all-news",'NewsController@news');
-Route::get("/news",'NewsController@singleNews');
-/*********************************************/
-Route::get("/all-activities",'ActivityController@activities');
-Route::get("/activity",'ActivityController@singleActivity');
-/*********************************************/
-Route::get("/all-qc-activities",'QamerCenterActivityController@activities');
-Route::get("/qc-activity",'QamerCenterActivityController@singleActivity');
 
+Route::get("/all-news",'Website\\NewsController@news');
+Route::get("/news",'Website\\NewsController@singleNews');
 
+Route::get("/all-activities",'Website\\ActivityController@activities');
+Route::get("/activity",'Website\\ActivityController@singleActivity');
 
+Route::get("/all-qc-activities",'Website\\QamerCenterActivityController@activities');
+Route::get("/qc-activity",'Website\\QamerCenterActivityController@singleActivity');
 
-/*********************************************/
-Route::get("/applications",'ApplicationController@applications');
-Route::get("/application",'ApplicationController@application');
-
+Route::get("/applications",'Website\\ApplicationController@applications');
+Route::get("/application",'Website\\ApplicationController@application');
 
 
 
@@ -36,10 +31,15 @@ Route::get("/application",'ApplicationController@application');
 
 
 
-/*********************************************/
-Route::get("/all-releases",'ReleaseController@releases');
-Route::get("/release",'ReleaseController@singleRelease');
+
+
+
+
 
 /*********************************************/
-Route::get("/studio",'StudioController@index');
-Route::get("/albums",'AlbumController@index');
+Route::get("/all-releases",'Website\\ReleaseController@releases');
+Route::get("/release",'Website\\ReleaseController@singleRelease');
+
+/*********************************************/
+Route::get("/studio",'Website\\StudioController@index');
+Route::get("/albums",'Website\\AlbumController@index');
