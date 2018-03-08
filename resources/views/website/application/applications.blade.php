@@ -18,7 +18,7 @@
                     <div class="ui application fluid card">
                         <div class="content">
                             <div class="app logo">
-                                <img class="ui circular image" src="{{asset("/img/tur.png")}}">
+                                <img class="ui circular image" src="{{asset("/storage/" . $application->Images[0]->image)}}">
                             </div>
 
                             <div class="app description">

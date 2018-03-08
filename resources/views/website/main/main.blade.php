@@ -97,7 +97,7 @@
                 </fieldset>
 
                 <div class="section-application-button">
-                    <a class="ui inverted basic tiny button" href="">عرض الكل</a>
+                    <a class="ui inverted basic tiny button" href="/applications">عرض الكل</a>
                 </div>
             </div>
         </div>
@@ -154,7 +154,7 @@
 
 
                 <div class="section-qamer-center-button">
-                    <a class="ui inverted basic tiny button" href="/all-activities">عرض الكل</a>
+                    <a class="ui inverted basic tiny button" href="/qc-activities">عرض الكل</a>
                 </div>
             </div>
         </div>

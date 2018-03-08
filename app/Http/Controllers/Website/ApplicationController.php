@@ -14,9 +14,9 @@ class ApplicationController extends Controller
     {
         $applications = Events::where("type",EventType::APPLICATIONS)
             ->orderBy("id","DESC")
-            ->paginate(6);
+            ->simplePaginate(6);
 
-        return view("website.applications.applications")->with(["applications"=>$applications]);
+        return view("website.application.applications")->with(["applications"=>$applications]);
     }
 
     public function application()
@@ -26,6 +26,6 @@ class ApplicationController extends Controller
             ->where("type", EventType::APPLICATIONS)
             ->firstOrfail();
 
-        return view("website.applications.application")->with(["application"=>$application]);
+        return view("website.application.application")->with(["application"=>$application]);
     }
 }

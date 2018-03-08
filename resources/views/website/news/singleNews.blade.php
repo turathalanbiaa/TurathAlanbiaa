@@ -42,6 +42,15 @@
                                 @foreach($lines as $line)
                                     <p class="line">{{$line}}</p>
                                 @endforeach
+
+                                @if(!is_null($news->externalLink))
+                                    <p class="ui olive header">
+                                        <span>روابط أخرى حول هذا الخبر - </span>
+                                        <a href="{{$news->externalLink}}">
+                                            <span> أضغط هنا </span>
+                                        </a>
+                                    </p>
+                                @endif
                             </div>
 
                             <!-- news albums -->

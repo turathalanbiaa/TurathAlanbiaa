@@ -42,6 +42,15 @@
                                 @foreach($lines as $line)
                                     <p class="line">{{$line}}</p>
                                 @endforeach
+
+                                @if(!is_null($activity->externalLink))
+                                    <p class="ui olive header">
+                                        <span>روابط أخرى حول هذا النشاط - </span>
+                                        <a href="{{$activity->externalLink}}">
+                                            <span> أضغط هنا </span>
+                                        </a>
+                                    </p>
+                                @endif
                             </div>
 
                             <!-- Activity albums -->
