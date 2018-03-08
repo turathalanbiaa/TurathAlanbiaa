@@ -77,7 +77,7 @@ class NewsController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'detail' => 'required',
-            'image' => 'required|file|image|min:0|max:1024',
+            'image' => 'required|file|image|min:0|max:250',
             'images[]' => 'file|image',
             'date' => 'required'
         ], [
@@ -87,7 +87,7 @@ class NewsController extends Controller
             'image.file' => 'يرجى رفع الصورة الرئيسية حول الخبر.',
             'image.image' => 'انت تحاول رفع ملف ليس بصورة.',
             'image.min' => 'انت تقوم برفع ملف صغير جداً.',
-            'image.max' => 'حجم الملف يجب ان لايتعدى 1MB.',
+            'image.max' => 'حجم الملف يجب ان لايتعدى 250KB.',
             'images[].file' => 'انت تحاول رفع ملف ليس بصورة.',
             'images[].image' => 'انت تحاول رفع ملف ليس بصورة.',
             'date.required' => 'يرجى ملئ حقل التأريخ.',

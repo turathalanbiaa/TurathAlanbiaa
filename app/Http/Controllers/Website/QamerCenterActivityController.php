@@ -16,22 +16,22 @@ class QamerCenterActivityController extends Controller
         {
             $activities = Events::where("type",EventType::QAMER_CENTER_ACTIVITIES)
                 ->orderBy("date","DESC")
-                ->paginate(12);
+                ->simplePaginate(12);
         }
         elseif (Input::get("orderBy") == "views")
         {
             $activities = Events::where("type",EventType::QAMER_CENTER_ACTIVITIES)
                 ->orderBy("views","DESC")
-                ->paginate(12);
+                ->simplePaginate(12);
         }
         else
         {
             $activities = Events::where("type",EventType::QAMER_CENTER_ACTIVITIES)
                 ->orderBy("id","DESC")
-                ->paginate(12);
+                ->simplePaginate(12);
         }
 
-        return view("qamerCenterActivity.qamerCenterActivities")->with(["activities"=>$activities]);
+        return view("website.qamerCenterActivity.qamerCenterActivities")->with(["activities"=>$activities]);
     }
 
     public function singleActivity()
@@ -45,9 +45,9 @@ class QamerCenterActivityController extends Controller
 
         $allActivities = Events::where("type", EventType::QAMER_CENTER_ACTIVITIES)
             ->orderBy("date","DESC")
-            ->paginate(12);
+            ->simplePaginate(12);
 
-        return view("qamerCenterActivity.singleQamerCenterActivity")->with(["activity"=>$activity,"allActivities"=>$allActivities]);
+        return view("website.qamerCenterActivity.singleQamerCenterActivity")->with(["activity"=>$activity,"allActivities"=>$allActivities]);
     }
 
     public static function addViewToActivity($id)

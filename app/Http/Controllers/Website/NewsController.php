@@ -16,22 +16,22 @@ class NewsController extends Controller
         {
             $news = Events::where("type",EventType::NEWS)
                 ->orderBy("date","DESC")
-                ->paginate(12);
+                ->simplePaginate(12);
         }
         elseif (Input::get("orderBy") == "views")
         {
             $news = Events::where("type",EventType::NEWS)
                 ->orderBy("views","DESC")
-                ->paginate(12);
+                ->simplePaginate(12);
         }
         else
         {
             $news = Events::where("type",EventType::NEWS)
                 ->orderBy("id","DESC")
-                ->paginate(12);
+                ->simplePaginate(12);
         }
 
-        return view("news.news")->with(["allNews"=>$news]);
+        return view("website.news.news")->with(["allNews"=>$news]);
     }
 
     public function singleNews()
@@ -45,9 +45,9 @@ class NewsController extends Controller
 
         $allNews = Events::where("type", EventType::NEWS)
             ->orderBy("date","DESC")
-            ->paginate(12);
+            ->simplePaginate(12);
 
-        return view("news.singleNews")->with(["news"=>$news,"allNews"=>$allNews]);
+        return view("website.news.singleNews")->with(["news"=>$news,"allNews"=>$allNews]);
     }
 
     public static function addViewToNews($id)

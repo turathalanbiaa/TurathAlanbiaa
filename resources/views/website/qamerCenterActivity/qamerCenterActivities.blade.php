@@ -1,11 +1,11 @@
-@extends("layout.layout")
+@extends("website.layout.layout")
 
 @section("title")
     <title>نشاطات مركز القمر</title>
 @endsection
 
 @section("content")
-    @include("layout.navbar")
+    @include("website.layout.navbar")
 
     <div class="ui container">
         <div class="ui section-line grid">
@@ -23,8 +23,8 @@
                         <i class="dropdown icon"></i>
                         <div class="default text">فرز حسب</div>
                         <div class="menu">
-                            <a class="item" href="/all-qc-activities?orderBy=date">تأريخ</a>
-                            <a class="item" href="/all-qc-activities?orderBy=views">عدد المشاهدات</a>
+                            <a class="item" href="/qc-activities?orderBy=date">تأريخ</a>
+                            <a class="item" href="/qc-activities?orderBy=views">عدد المشاهدات</a>
                         </div>
                     </div>
                 </h3>
@@ -35,7 +35,7 @@
                     @foreach($activities as $activity)
                         <a class="card" href="/qc-activity?id={{$activity->id}}">
                             <div class="image">
-                                <img src="{{asset("/img/news1.png")}}">
+                                <img src="{{asset("/storage/" . $activity->Images[0]->image)}}">
                             </div>
 
                             <div class="content">
@@ -59,9 +59,15 @@
                 </div>
             </div>
 
-            <div class="ui center aligned column">
-                {{$activities->links()}}
-            </div>
+            @if($activities->hasPages())
+                <div class="ui center aligned column">
+                    @if(isset($_GET["orderBy"]))
+                        {{$activities->appends(['orderBy' => $_GET["orderBy"]])->links()}}
+                    @else
+                        {{$activities->links()}}
+                    @endif
+                </div>
+            @endif
         </div>
     </div>
 @endsection

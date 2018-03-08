@@ -16,22 +16,22 @@ class ActivityController extends Controller
         {
             $activities = Events::where("type",EventType::ACTIVITIES)
                 ->orderBy("date","DESC")
-                ->paginate(12);
+                ->simplePaginate(12);
         }
         elseif (Input::get("orderBy") == "views")
         {
             $activities = Events::where("type",EventType::ACTIVITIES)
                 ->orderBy("views","DESC")
-                ->paginate(12);
+                ->simplePaginate(12);
         }
         else
         {
             $activities = Events::where("type",EventType::ACTIVITIES)
                 ->orderBy("id","DESC")
-                ->paginate(12);
+                ->simplePaginate(12);
         }
 
-        return view("activity.activities")->with(["activities"=>$activities]);
+        return view("website.activity.activities")->with(["activities"=>$activities]);
     }
 
     public function singleActivity()
@@ -45,9 +45,9 @@ class ActivityController extends Controller
 
         $allActivities = Events::where("type", EventType::ACTIVITIES)
             ->orderBy("date","DESC")
-            ->paginate(12);
+            ->simplePaginate(12);
 
-        return view("activity.singleActivity")->with(["activity"=>$activity,"allActivities"=>$allActivities]);
+        return view("website.activity.singleActivity")->with(["activity"=>$activity,"allActivities"=>$allActivities]);
     }
 
     public static function addViewToActivity($id)

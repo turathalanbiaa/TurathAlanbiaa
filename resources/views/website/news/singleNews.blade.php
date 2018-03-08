@@ -1,11 +1,11 @@
-@extends("layout.layout")
+@extends("website.layout.layout")
 
 @section("title")
     <title>الأخبار</title>
 @endsection
 
 @section("content")
-    @include("layout.navbar")
+    @include("website.layout.navbar")
     <div class="ui container">
         <div class="ui section-line grid">
             <div class="special-divider"></div>
@@ -27,7 +27,7 @@
                                 </h2>
 
                                 @if(!is_null($news->videoLink))
-                                    <div class="ui embed" data-url="{{$news->videoLink}}" data-placeholder="{{asset("/img/news1.png")}}" data-icon="ui play video icon"></div>
+                                    <div class="ui embed" data-url="{{$news->videoLink}}" data-placeholder="{{asset("/storage/" . $news->Images[0]->image)}}"></div>
                                     <div class="ui divider"></div>
                                 @endif
 
@@ -35,7 +35,7 @@
                                     <a class="ui left corner label" onclick="$('.ui.modal').modal('show');">
                                         <i class="zoom black icon"></i>
                                     </a>
-                                    <img src="{{asset("/img/news1.png")}}">
+                                    <img src="{{asset("/storage/" . $news->Images[0]->image)}}">
                                 </div>
 
                                 <?php $lines = explode(".",$news->content); ?>
@@ -45,43 +45,30 @@
                             </div>
 
                             <!-- news albums -->
-                            <div class="column">
-                                @include("news.albums")
-                            </div>
+                            @if(count($news->Images) > 1)
+                                <div class="column">
+                                    @include("website.news.albums")
+                                </div>
+                            @endif
                         </div>
                     </div>
 
                     <div class="sixteen wide mobile five wide tablet five wide computer column">
                         <div class="ui medium inverted header">
                             <span>آخر الأخبار</span>
-
-                            <div class="ui divider"></div>
-
-                            <div class="ui sub header">
-                                <span> الصفحات من </span>
-                                <span>1</span>
-                                <span> الى </span>
-                                <span>{{$allNews->lastPage()}}</span>
-
-                                <a class="page" href="/all-news?page=1"><i class="angle right icon"></i></a>
-                                <a class="page" href="/all-news?page=2"><i class="angle double left icon"></i></a>
-                                <a class="page" href="/all-news?page={{$allNews->lastPage()}}"><i class="angle treble left icon icon"></i></a>
-                            </div>
                         </div>
 
-                        <div class="ui divider"></div>
-
                         <div class="ui link news pointing list">
-                            @foreach($allNews as $news)
-                                <a class="item" href="/news?id={{$news->id}}">
-                                    {{$news->title}}
+                            @foreach($allNews as $singleNews)
+                                <a class="item" href="/news?id={{$singleNews->id}}">
+                                    {{$singleNews->title}}
                                 </a>
                             @endforeach
                         </div>
                     </div>
                 </div>
 
-                @include("layout.footer")
+                @include("website.layout.footer")
             </div>
         </div>
     </div>
@@ -90,7 +77,7 @@
 @section("extra-content")
     <div class="ui modal">
         <i class="close icon"></i>
-        <img class="ui fluid thumbnail image" src="{{asset("/img/news1.png")}}">
+        <img class="ui fluid thumbnail image" src="{{asset("/storage/" . $news->Images[0]->image)}}">
     </div>
 @endsection
 

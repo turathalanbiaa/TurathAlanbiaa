@@ -1,13 +1,9 @@
 <div class="ui three column grid" id="albums">
-    <div class="column">
-        <img class="ui fluid image" src="{{asset("/img/news1.png")}}">
-    </div>
-    <div class="column">
-        <img class="ui fluid image" src="{{asset("/img/news1.png")}}">
-    </div>
-    <div class="column">
-        <img class="ui fluid image" src="{{asset("/img/news1.png")}}">
-    </div>
+    @foreach($news->Images as $image)
+        <div class="column">
+            <img class="ui fluid image" src="{{asset("/storage/" . $image->image)}}">
+        </div>
+    @endforeach
 </div>
 
 <script>

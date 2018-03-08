@@ -7,36 +7,6 @@
 @section("content")
     @include("website.layout.navbar")
 
-    {{--<style>--}}
-        {{--.date {--}}
-            {{--position: fixed;--}}
-            {{--bottom: 30px;--}}
-            {{--left: 30px;--}}
-            {{--z-index: 100;--}}
-            {{--width: 76px;--}}
-            {{--height: 76px;--}}
-            {{--border-radius: 100% 100%;--}}
-            {{--background-color: rgb(221, 238, 252);--}}
-            {{--box-shadow: 0 0 2px 2px rgba(120, 186, 88, 0.78);--}}
-        {{--}--}}
-
-        {{--.date:hover {--}}
-            {{--cursor: pointer;--}}
-            {{--box-shadow: 0 0 7px 7px rgba(120, 186, 88, 1);--}}
-        {{--}--}}
-
-        {{--.date i.calendar.icon {--}}
-            {{--width: 50px;--}}
-            {{--height: 50px;--}}
-            {{--margin: 13px 13px;--}}
-            {{--color: green;--}}
-            {{--font-size: 3em;--}}
-        {{--}--}}
-    {{--</style>--}}
-    {{--<div class="date">--}}
-        {{--<i class="ui big calendar icon"></i>--}}
-    {{--</div>--}}
-
     <div class="ui container">
         <div class="ui section-line grid">
             <div class="special-divider"></div>
@@ -56,7 +26,7 @@
 
 
                 <div class="section-news-button">
-                    <a class="ui inverted basic tiny button" href="/all-news">عرض الكل</a>
+                    <a class="ui inverted basic tiny button" href="/news/all">عرض الكل</a>
                 </div>
             </div>
         </div>
@@ -75,7 +45,7 @@
 
 
                 <div class="section-activity-button">
-                    <a class="ui inverted basic tiny button" href="/all-activities">عرض الكل</a>
+                    <a class="ui inverted basic tiny button" href="/activities">عرض الكل</a>
                 </div>
             </div>
         </div>

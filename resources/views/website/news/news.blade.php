@@ -1,11 +1,11 @@
-@extends("layout.layout")
+@extends("website.layout.layout")
 
 @section("title")
     <title>الأخبار</title>
 @endsection
 
 @section("content")
-    @include("layout.navbar")
+    @include("website.layout.navbar")
 
     <div class="ui container">
         <div class="ui section-line grid">
@@ -23,8 +23,8 @@
                         <i class="dropdown icon"></i>
                         <div class="default text">فرز حسب</div>
                         <div class="menu">
-                            <a class="item" href="/all-news?orderBy=date">تأريخ</a>
-                            <a class="item" href="/all-news?orderBy=views">عدد المشاهدات</a>
+                            <a class="item" href="/news/all?orderBy=date">تأريخ</a>
+                            <a class="item" href="/news/all?orderBy=views">عدد المشاهدات</a>
                         </div>
                     </div>
                 </h3>
@@ -35,7 +35,7 @@
                     @foreach($allNews as $news)
                         <a class="card" href="/news?id={{$news->id}}">
                             <div class="image">
-                                <img src="{{asset("/img/news1.png")}}">
+                                <img src="{{asset("/storage/" . $news->Images[0]->image)}}" style="height: 225px;">
                             </div>
 
                             <div class="content">
@@ -59,9 +59,15 @@
                 </div>
             </div>
 
-            <div class="ui center aligned column">
-                {{$allNews->links()}}
-            </div>
+            @if($allNews->hasPages())
+                <div class="ui center aligned column">
+                    @if(isset($_GET["orderBy"]))
+                        {{$allNews->appends(['orderBy' => $_GET["orderBy"]])->links()}}
+                    @else
+                        {{$allNews->links()}}
+                    @endif
+                </div>
+            @endif
         </div>
     </div>
 @endsection
@@ -97,9 +103,9 @@
         });
         $(document).ready(function () {
             var pagination = $(".pagination");
-            pagination.removeClass("pagination").addClass("ui right aligned pagination olive menu");
+            pagination.removeClass("pagination").addClass("ui pagination olive menu");
             // $('.pagination').addClass('ui right aligned pagination olive menu');
-            pagination.css({'padding':'0','font-size':'12px'});
+            pagination.css({'padding':'0','font-size':'14px'});
             pagination.find('li').addClass('item');
         });
     </script>

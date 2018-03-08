@@ -45,14 +45,14 @@
                             </div>
 
                             <div class="image">
-                                <a href="/all-news">
+                                <a href="/news/all">
                                     <img src="{{asset("/img/icons/6.png")}}" title="الأخبار">
                                     <p>الأخبار</p>
                                 </a>
                             </div>
 
                             <div class="image">
-                                <a href="/all-activities">
+                                <a href="/activities">
                                     <img src="{{asset("/img/icons/7.png")}}" title="النشاطات">
                                     <p>النشاطات</p>
                                 </a>
@@ -66,7 +66,7 @@
                             </div>
 
                             <div class="image">
-                                <a href="/all-qc-activities">
+                                <a href="/qc-activities">
                                     <img src="{{asset("/img/icons/9.png")}}" title="نشاطات مركز القمر">
                                     <p>نشاطات مركز القمر</p>
                                 </a>
