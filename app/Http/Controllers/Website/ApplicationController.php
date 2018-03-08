@@ -16,7 +16,7 @@ class ApplicationController extends Controller
             ->orderBy("id","DESC")
             ->paginate(6);
 
-        return view("applications.applications")->with(["applications"=>$applications]);
+        return view("website.applications.applications")->with(["applications"=>$applications]);
     }
 
     public function application()
@@ -26,6 +26,6 @@ class ApplicationController extends Controller
             ->where("type", EventType::APPLICATIONS)
             ->firstOrfail();
 
-        return view("applications.application")->with(["application"=>$application]);
+        return view("website.applications.application")->with(["application"=>$application]);
     }
 }

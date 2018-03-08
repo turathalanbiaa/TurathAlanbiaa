@@ -1,0 +1,17 @@
+body {
+    direction: rtl;
+    text-align: right;
+    background-color: #f1f1f1;
+}
+
+.ui.celled.table tr td:first-child,
+.ui.celled.table tr th:first-child
+{
+    border-left: 1px solid rgba(34,36,38,.1);
+}
+
+.ui.celled.table tr td:last-child,
+.ui.celled.table tr th:last-child
+{
+    border-left: none;
+}

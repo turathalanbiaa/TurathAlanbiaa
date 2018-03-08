@@ -14,7 +14,7 @@ class MainController extends Controller
 {
     public function index()
     {
-        return view("main.main")->with([
+        return view("website.main.main")->with([
             "latestNews"=>self::latestNews(),
             "latestActivities"=>self::latestActivities(),
             "latestQamerCenterActivities"=>self::latestQamerCenterActivities(),

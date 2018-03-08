@@ -21,6 +21,8 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
+session_start();
+
 require __DIR__.'/../vendor/autoload.php';
 
 /*

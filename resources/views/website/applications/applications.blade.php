@@ -1,11 +1,11 @@
-@extends("layout.layout")
+@extends("website.layout.layout")
 
 @section("title")
     <title>التطبيقات</title>
 @endsection
 
 @section("content")
-    @include("layout.navbar")
+    @include("website.layout.navbar")
 
     <div class="ui container">
         <div class="ui section-line grid">

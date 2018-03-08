@@ -1,4 +1,4 @@
-@extends("layout.layout")
+@extends("website.layout.layout")
 
 @section("title")
     <title>النشاطات</title>

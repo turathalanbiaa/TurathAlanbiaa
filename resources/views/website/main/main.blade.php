@@ -1,11 +1,11 @@
-@extends("layout.layout")
+@extends("website.layout.layout")
 
 @section("title")
     <title>تراث الأنبياء</title>
 @endsection
 
 @section("content")
-    @include("layout.navbar")
+    @include("website.layout.navbar")
 
     {{--<style>--}}
         {{--.date {--}}
@@ -49,7 +49,7 @@
 
                     <div class="ui one column news grid">
                         <div class="column">
-                            @include("main.includes.news-owl-carousel",array(["latestNews"=>$latestNews]))
+                            @include("website.main.includes.news-owl-carousel",array(["latestNews"=>$latestNews]))
                         </div>
                     </div>
                 </fieldset>
@@ -68,7 +68,7 @@
 
                     <div class="ui one column activity grid">
                         <div class="column">
-                            @include("main.includes.activity-owl-carousel",array(["latestActivities"=>$latestActivities]))
+                            @include("website.main.includes.activity-owl-carousel",array(["latestActivities"=>$latestActivities]))
                         </div>
                     </div>
                 </fieldset>
@@ -87,7 +87,7 @@
 
                     <div class="ui one column student grid">
                         <div class="column">
-                            @include("main.includes.special-student",array(["students"=>$students]))
+                            @include("website.main.includes.special-student",array(["students"=>$students]))
                         </div>
                     </div>
                 </fieldset>
@@ -105,7 +105,7 @@
 
                     <div class="ui one column releases grid">
                         <div class="column">
-                            @include("main.includes.releases",array(["releases"=>$releases]))
+                            @include("website.main.includes.releases",array(["releases"=>$releases]))
                         </div>
                     </div>
                 </fieldset>
@@ -121,7 +121,7 @@
 
                     <div class="ui one column application grid">
                         <div class="column">
-                            @include("main.includes.application",array(["applications"=>$applications]))
+                            @include("website.main.includes.application",array(["applications"=>$applications]))
                         </div>
                     </div>
                 </fieldset>
@@ -140,7 +140,7 @@
                     <div class="ui segment">
                         <div class="ui one column faq grid">
                             <div class="column">
-                                @include("main.includes.faq",array(["faqQuestions"=>$faqQuestions]))
+                                @include("website.main.includes.faq",array(["faqQuestions"=>$faqQuestions]))
                             </div>
                         </div>
                     </div>
@@ -158,7 +158,7 @@
                     <div class="ui segment">
                         <div class="ui one column masael grid">
                             <div class="column">
-                                @include("main.includes.masael",array(["masaelQuestions"=>$masaelQuestions]))
+                                @include("website.main.includes.masael",array(["masaelQuestions"=>$masaelQuestions]))
                             </div>
                         </div>
                     </div>
@@ -177,7 +177,7 @@
 
                     <div class="ui one column qamer-center grid">
                         <div class="column">
-                            @include("main.includes.qamer-center-owl-carousel",array(["latestQamerCenterActivities"=>$latestQamerCenterActivities]))
+                            @include("website.main.includes.qamer-center-owl-carousel",array(["latestQamerCenterActivities"=>$latestQamerCenterActivities]))
                         </div>
                     </div>
                 </fieldset>
@@ -196,7 +196,7 @@
 
                     <div class="ui one column footer grid">
                         <div class="column">
-                            @include("main.includes.footer")
+                            @include("website.main.includes.footer")
                         </div>
                     </div>
                 </fieldset>
