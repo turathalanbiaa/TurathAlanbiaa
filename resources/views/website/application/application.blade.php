@@ -1,4 +1,4 @@
-@extends("layout.layout")
+@extends("website.layout.layout")
 
 @section("title")
     <title>التطبيقات</title>
@@ -6,7 +6,7 @@
 @endsection
 
 @section("content")
-    @include("layout.navbar")
+    @include("website.layout.navbar")
 
     <div class="ui container">
         <div class="ui section-line grid">
@@ -14,56 +14,75 @@
         </div>
 
         <div class="ui application grid">
-            <div class="seven wide computer sixteen wide tablet sixteen wide mobile column">
-                <h2 class="ui inverted header">
-                    <span>التطبيقات - </span>
-                    <span>{{$application->title}}</span>
-                    <div class="sub header">
-                        <i class="calendar olive icon"></i>
-                        <span>{{$application->date}}</span>
+            <div class="ten wide column">
+                <div class="ui grid">
+                    <div class="sixteen wide column">
+                        <div class="ui middle aligned small right floated image">
+                            <img src="{{asset("/storage/" . $application->Images[0]->image)}}">
+                        </div>
+
+                        <h2 class="ui inverted header">
+                            <span>تطبيق - </span>
+                            <span>{{$application->title}}</span>
+                            <div class="sub header">
+                                <i class="calendar olive icon"></i>
+                                <span>{{$application->date}}</span>
+                            </div>
+                        </h2>
                     </div>
-                </h2>
-                <p class="ui medium right aligned inverted header">{{$application->content}}</p>
-            </div>
 
-            <div class="nine wide computer sixteen wide tablet sixteen wide mobile column">
-                @include("applications.slideshow")
-            </div>
+                    <div class="sixteen wide column">
+                        <p class="ui inverted header">{{$application->content}}</p>
+                    </div>
 
-            <div class="sixteen wide column">
-                @if(!is_null($application->videoLink))
-                    <div class="ui divider"></div>
-                    <div class="ui hidden divider"></div>
-                    <div class="ui hidden divider"></div>
-                    <div class="ui hidden divider"></div>
-                    <div class="ui hidden divider"></div>
-                    <div class="ui center aligned grid">
-                        <div class="ten wide computer sixteen wide tablet sixteen wide mobile column">
-                            <div class="ui embed" data-url="{{$application->videoLink}}" data-placeholder="{{asset("/img/news1.png")}}"></div>
+                    <div class="sixteen wide column">
+                        @include("website.application.slideshow")
+                    </div>
+
+                    @if(!is_null($application->videoLink))
+                        <div class="sixteen wide column">
+                            <div class="ui divider"></div>
+                            <div class="ui hidden divider"></div>
+                            <div class="ui hidden divider"></div>
+                            <div class="ui embed" data-url="{{$application->videoLink}}" data-placeholder="{{asset("/storage/" . $application->Images[0]->image)}}"></div>
+                        </div>
+                    @endif
+
+                    <div class="sixteen wide column">
+                        <div class="ui divider"></div>
+                        <div class="ui hidden divider"></div>
+                        <div class="ui hidden divider"></div>
+                        <div class="ui center aligned large inverted header">حمل التطبيق الآن من</div>
+                        <div class="ui hidden divider"></div>
+                        <div class="ui hidden divider"></div>
+
+                        <?php
+                        $links = explode("<>", $application->externalLink);
+                        $googlePlayLink = $links[0];
+                        $appleStoreLink = $links[1];
+
+                        if ($googlePlayLink == "notFound")
+                            $googlePlayLink = "https://play.google.com/store/apps/developer?id=turath.alanbiaa&hl=ar";
+
+                        if ($appleStoreLink == "notFound")
+                            $appleStoreLink = "https://itunes.apple.com/us/developer/ali-faris-abed/id1150792622?mt=8";
+                        ?>
+
+                        <div class="ui center aligned header">
+                            <a class="ui special button" href="{{$googlePlayLink}}" target="_blank">
+                                <img src="{{asset("/img/google-play.png")}}">
+                            </a>
+
+                            <a class="ui special button" href="{{$appleStoreLink}}" target="_blank">
+                                <img src="{{asset("/img/app-store.png")}}">
+                            </a>
                         </div>
                     </div>
-                    <div class="ui hidden divider"></div>
-                    <div class="ui hidden divider"></div>
-                @endif
+                </div>
             </div>
 
-            <div class="sixteen wide column">
-                <div class="ui divider"></div>
-                <div class="ui hidden divider"></div>
-                <div class="ui hidden divider"></div>
-                <div class="ui center aligned large inverted header">حمل التطبيق الآن من</div>
-                <div class="ui hidden divider"></div>
-                <div class="ui hidden divider"></div>
-
-               <div class="ui center aligned header">
-                   <a class="ui special button" href="https://play.google.com/store/apps/developer?id=turath.alanbiaa&amp;hl=ar">
-                       <img src="{{asset("/img/google-play.png")}}">
-                   </a>
-
-                   <a class="ui special button" href="https://itunes.apple.com/us/app/%D9%85%D8%B9%D9%87%D8%AF-%D8%AA%D8%B1%D8%A7%D8%AB-%D8%A7%D9%84%D8%A7%D9%86%D8%A8%D9%8A%D8%A7%D8%A1/id1150792623?mt=8">
-                       <img src="{{asset("/img/app-store.png")}}">
-                   </a>
-               </div>
+            <div class="six wide column">
+                show other apps
             </div>
         </div>
     </div>

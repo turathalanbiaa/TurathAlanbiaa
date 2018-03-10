@@ -41,7 +41,7 @@
 
             <div class="three wide computer four wide tablet eight wide mobile column">
                 <i class="certificate violet massive icon"></i>
-                <a class="ui fluid teal large button" href="">
+                <a class="ui fluid teal large button" href="/ControlPanel/application">
                     <span>التطبيقات</span>
                 </a>
             </div>

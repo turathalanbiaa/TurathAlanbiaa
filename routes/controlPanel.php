@@ -22,3 +22,9 @@ Route::get("/ControlPanel/qcActivity", "ControlPanel\\QCActivityController@index
 Route::post("/ControlPanel/qcActivity/delete", "ControlPanel\\QCActivityController@delete");
 Route::get("/ControlPanel/qcActivity/create", "ControlPanel\\QCActivityController@create");
 Route::post("/ControlPanel/qcActivity/create/validate", "ControlPanel\\QCActivityController@validation");
+
+
+Route::get("/ControlPanel/application", "ControlPanel\\ApplicationController@index");
+Route::post("/ControlPanel/application/delete", "ControlPanel\\ApplicationController@delete");
+Route::get("/ControlPanel/application/create", "ControlPanel\\ApplicationController@create");
+Route::post("/ControlPanel/application/create/validate", "ControlPanel\\ApplicationController@validation");

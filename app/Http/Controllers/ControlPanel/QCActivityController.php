@@ -56,7 +56,7 @@ class QCActivityController extends Controller
         }
         else
         {
-            EventLogController::add($request, "DELETE QAMER CENTER ACTIVITY", $id);
+            EventLogController::add($request, "DELETE QC-ACTIVITY", $id);
             return ["success"=>true];
         }
     }
@@ -77,7 +77,7 @@ class QCActivityController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'detail' => 'required',
-            'image' => 'required|file|image|min:0|max:1024',
+            'image' => 'required|file|image|min:0|max:250',
             'images[]' => 'file|image',
             'date' => 'required'
         ], [
@@ -87,7 +87,7 @@ class QCActivityController extends Controller
             'image.file' => 'يرجى رفع الصورة الرئيسية حول النشاط.',
             'image.image' => 'انت تحاول رفع ملف ليس بصورة.',
             'image.min' => 'انت تقوم برفع ملف صغير جداً.',
-            'image.max' => 'حجم الملف يجب ان لايتعدى 1MB.',
+            'image.max' => 'حجم الملف يجب ان لايتعدى 250KB.',
             'images[].file' => 'انت تحاول رفع ملف ليس بصورة.',
             'images[].image' => 'انت تحاول رفع ملف ليس بصورة.',
             'date.required' => 'يرجى ملئ حقل التأريخ.',
@@ -104,6 +104,9 @@ class QCActivityController extends Controller
         $newEvents->file = null;
         $newEvents->date = Input::get("date", "");
         $newEvents->save();
+
+        //Add This New Event To Event Log
+        EventLogController::add($request, "CREATE QC-ACTIVITY", $newEvents->id);
 
         //Main Image for Qamer Center Activity Event.
         $mainImage = $request->all()["image"];

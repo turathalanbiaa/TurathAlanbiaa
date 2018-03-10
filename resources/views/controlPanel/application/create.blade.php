@@ -1,7 +1,7 @@
 @extends("controlPanel.layout.mainLayout")
 
 @section("title")
-    <title>اضافة خبر</title>
+    <title>اضافة تطبيق</title>
 @endsection
 
 @section("content")
@@ -10,7 +10,7 @@
             <div class="ui inverted top attached segment">
                 <div class="ui hidden divider"></div>
                 <h1 class="ui center aligned header">
-                    <span>الأخبار - اضافة خبر جديد</span>
+                    <span>التطبيقات - اضافة تطبيق جديد</span>
                 </h1>
                 <div class="ui hidden divider"></div>
             </div>
@@ -27,24 +27,24 @@
                     </div>
                 @endif
 
-                @if(session("CreateNewsMessage"))
+                @if(session("CreateApplicationMessage"))
                     <div class="ui success message">
-                        <div class="ui center aligned green header">{{session("CreateNewsMessage")}}</div>
+                        <div class="ui center aligned green header">{{session("CreateApplicationMessage")}}</div>
                     </div>
                     <div class="ui divider"></div>
                     <div class="ui hidden divider"></div>
                 @endif
 
-                <form class="ui large form" method="post" action="/ControlPanel/news/create/validate" enctype="multipart/form-data">
+                <form class="ui large form" method="post" action="/ControlPanel/application/create/validate" enctype="multipart/form-data">
                     {!! csrf_field() !!}
                     <div class="ten wide field">
-                        <label for="title">العنوان</label>
+                        <label for="title">اسم التطبيق</label>
                         <input type="text" name="title" id="title" value="{{old("title")}}">
                     </div>
 
                     <div class="ten wide field">
-                        <label for="detail">التفاصيل</label>
-                        <textarea name="detail" id="detail" rows="15">{{old("detail")}}</textarea>
+                        <label for="image">الصورة الرئيسية للتطبيق (Logo)</label>
+                        <input type="file" name="image" id="image">
                     </div>
 
                     <div class="ten wide field">
@@ -53,23 +53,29 @@
                     </div>
 
                     <div class="ten wide field">
-                        <label for="image">الصورة الرئيسية للخبر</label>
-                        <input type="file" name="image" id="image">
+                        <label for="detail">التفاصيل</label>
+                        <textarea name="detail" id="detail" rows="15">{{old("detail")}}</textarea>
                     </div>
 
                     <div class="ten wide field">
-                        <label for="images">صور أخرى حول الخبر</label>
+                        <label for="googlePlayLink">رابط التطبيق على Google Play</label>
+                        <input type="text" name="googlePlayLink" id="googlePlayLink" value="{{old("googlePlayLink")}}">
+                    </div>
+
+                    <div class="ten wide field">
+                        <label for="appleStoreLink">رابط التطبيق على Apple Store</label>
+                        <input type="text" name="appleStoreLink" id="appleStoreLink" value="{{old("appleStoreLink")}}">
+                    </div>
+
+
+                    <div class="ten wide field">
+                        <label for="images">صور أخرى حول التطبيق</label>
                         <input type="file" name="images[]" id="images" multiple>
                     </div>
 
                     <div class="ten wide field">
-                        <label for="videoLink">رابط فديو خاجي</label>
+                        <label for="videoLink">رابط الفديو حول استخدام التطبيق </label>
                         <input type="text" name="videoLink" id="videoLink" value="{{old("videoLink")}}">
-                    </div>
-
-                    <div class="ten wide field">
-                        <label for="externalLink">رابط مصدر خارجي</label>
-                        <input type="text" name="externalLink" id="externalLink" value="{{old("externalLink")}}">
                     </div>
 
                     <button type="submit" class="ui teal button">ارسال</button>

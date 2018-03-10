@@ -1,7 +1,7 @@
 @extends("controlPanel.layout.mainLayout")
 
 @section("title")
-    <title>اضافة النشاط</title>
+    <title>اضافة نشاط</title>
 @endsection
 
 @section("content")

@@ -23,7 +23,7 @@
 
                             <div class="app description">
                                 <p class="title">{{$application->title}}</p>
-                                <p class="detail">{{$application->content}}{{$application->content}}</p>
+                                <p class="detail">{{$application->content}}</p>
                             </div>
                         </div>
 
@@ -37,12 +37,24 @@
                                     <a href="/application?id={{$application->id}}"><i class="info icon"></i></a>
                                 </div>
 
+                                <?php
+                                    $links = explode("<>", $application->externalLink);
+                                    $googlePlayLink = $links[0];
+                                    $appleStoreLink = $links[1];
+
+                                if ($googlePlayLink == "notFound")
+                                    $googlePlayLink = "https://play.google.com/store/apps/developer?id=turath.alanbiaa&hl=ar";
+
+                                if ($appleStoreLink == "notFound")
+                                    $appleStoreLink = "https://itunes.apple.com/us/developer/ali-faris-abed/id1150792622?mt=8";
+                                ?>
+
                                 <div class="google play button">
-                                    <a href=""><i class="google play icon"></i></a>
+                                    <a href="{{$googlePlayLink}}" target="_blank"><i class="google play icon"></i></a>
                                 </div>
 
                                 <div class="apple store button">
-                                    <a href=""><i class="apple store icon"></i></a>
+                                    <a href="{{$appleStoreLink}}" target="_blank"><i class="apple store icon"></i></a>
                                 </div>
                             </div>
                         </div>

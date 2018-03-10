@@ -105,6 +105,9 @@ class NewsController extends Controller
         $newEvents->date = Input::get("date", "");
         $newEvents->save();
 
+        //Add This New Event To Event Log
+        EventLogController::add($request, "CREATE NEWS", $newEvents->id);
+
         //Main Image for News Event.
         $mainImage = $request->all()["image"];
 

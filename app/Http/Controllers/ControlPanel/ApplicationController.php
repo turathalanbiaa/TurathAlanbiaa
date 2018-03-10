@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 
-class ActivityController extends Controller
+class ApplicationController extends Controller
 {
     public function index(Request $request)
     {
@@ -21,17 +21,17 @@ class ActivityController extends Controller
 
         if (!is_null(Input::get("query")))
         {
-            $activities = Events::where("type",EventType::ACTIVITIES)
+            $applications = Events::where("type",EventType::APPLICATIONS)
                 ->where("title","like","%".Input::get("query")."%")
                 ->orderBy("title","ASC")
                 ->simplePaginate(25);
         } else {
-            $activities = Events::where("type",EventType::ACTIVITIES)
+            $applications = Events::where("type",EventType::APPLICATIONS)
                 ->orderBy("date","DESC")
                 ->simplePaginate(25);
         }
 
-        return view("controlPanel.activity.main")->with(["activities"=>$activities]);
+        return view("controlPanel.application.main")->with(["applications"=>$applications]);
     }
 
     public function delete(Request $request)
@@ -42,21 +42,21 @@ class ActivityController extends Controller
         MainController::loginWithCookie($request);
 
         $id = Input::get("id");
-        $activity = Events::where("id", $id)
-            ->where("type",EventType::ACTIVITIES)
+        $application = Events::where("id", $id)
+            ->where("type",EventType::APPLICATIONS)
             ->first();
 
-        if (!$activity)
+        if (!$application)
             return ["notFound"=>true];
 
-        $success = $activity->delete();
+        $success = $application->delete();
         if (!$success)
         {
             return ["success"=>false];
         }
         else
         {
-            EventLogController::add($request, "DELETE ACTIVITY", $id);
+            EventLogController::add($request, "DELETE APPLICATION", $id);
             return ["success"=>true];
         }
     }
@@ -68,7 +68,7 @@ class ActivityController extends Controller
 
         MainController::loginWithCookie($request);
 
-        return view("controlPanel.activity.create");
+        return view("controlPanel.application.create");
     }
 
     public function validation(Request $request)
@@ -77,41 +77,46 @@ class ActivityController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'detail' => 'required',
-            'image' => 'required|file|image|min:0|max:250',
+            'image' => 'required|file|image|min:0|max:100',
             'images[]' => 'file|image',
             'date' => 'required'
         ], [
-            'title.required' => 'يرجى ادخال عنوان النشاط.',
-            'detail.required' => 'يرجى أدخال بعض التفاصيل حول النشاط.',
-            'image.required' => 'يرجى رفع الصورة الرئيسية حول النشاط.',
-            'image.file' => 'يرجى رفع الصورة الرئيسية حول النشاط.',
+            'title.required' => 'يرجى ادخال اسم التطبيق.',
+            'detail.required' => 'يرجى أدخال بعض التفاصيل حول التطبيق.',
+            'image.required' => 'يرجى رفع Logo التطبيق.',
+            'image.file' => 'يرجى رفع Logo التطبيق.',
             'image.image' => 'انت تحاول رفع ملف ليس بصورة.',
             'image.min' => 'انت تقوم برفع ملف صغير جداً.',
-            'image.max' => 'حجم الملف يجب ان لايتعدى 250KB.',
+            'image.max' => 'حجم الملف يجب ان لايتعدى 100KB.',
             'images[].file' => 'انت تحاول رفع ملف ليس بصورة.',
             'images[].image' => 'انت تحاول رفع ملف ليس بصورة.',
             'date.required' => 'يرجى ملئ حقل التأريخ.',
         ]);
 
-        //Create New Activity Event.
+        //Create New Application Event.
         $newEvents = new Events();
+
+        $googlePlayLink = Input::get("googlePlayLink") ?? "notFound";
+        $appleStoreLink = Input::get("appleStoreLink") ?? "notFound";
+        $externalLink = $googlePlayLink . "<>" . $appleStoreLink;
+
         $newEvents->title = Input::get("title");
         $newEvents->content = Input::get("detail");
-        $newEvents->externalLink = Input::get("externalLink",null);
+        $newEvents->externalLink = $externalLink;
         $newEvents->videoLink = Input::get("videoLink",null);
         $newEvents->views = 0;
-        $newEvents->type = EventType::ACTIVITIES;
+        $newEvents->type = EventType::APPLICATIONS;
         $newEvents->file = null;
         $newEvents->date = Input::get("date", "");
         $newEvents->save();
 
         //Add This New Event To Event Log
-        EventLogController::add($request, "CREATE ACTIVITY", $newEvents->id);
+        EventLogController::add($request, "CREATE APPLICATION", $newEvents->id);
 
-        //Main Image for Activity Event.
+        //Main Image for Application Event.
         $mainImage = $request->all()["image"];
 
-        $path = Storage::putFile("public/activity", $mainImage);
+        $path = Storage::putFile("public/application", $mainImage);
         $newPath = str_replace("public/","",$path);
 
         $newImage = new Image();
@@ -119,14 +124,14 @@ class ActivityController extends Controller
         $newImage->image = $newPath;
         $newImage->save();
 
-        //Other Images for Activity Event.
+        //Other Images for Application Event.
         if (isset($request->all()["images"]))
         {
             $images = $request->all()["images"];
 
             foreach ($images as $image)
             {
-                $path = Storage::putFile("public/activity", $image);
+                $path = Storage::putFile("public/application", $image);
                 $newPath = str_replace("public/","",$path);
 
                 $newImage = new Image();
@@ -137,6 +142,6 @@ class ActivityController extends Controller
         }
 
         //Return
-        return redirect("/ControlPanel/activity/create")->with("CreateActivityMessage","تمت عملية الأضافة بنجاح.");
+        return redirect("/ControlPanel/application/create")->with("CreateApplicationMessage","تمت عملية الأضافة بنجاح.");
     }
 }
