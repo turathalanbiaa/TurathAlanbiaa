@@ -3,7 +3,7 @@
         <div class="item">
             <div class="ui fluid card">
                 <a class="image" href="/news?id={{$news->id}}">
-                    <img src="{{asset("img/news1.png")}}">
+                    <img src="{{asset("/storage/" . $news->Images[0]->image)}}">
                 </a>
                 <a class="content" href="/news?id={{$news->id}}">
                     <p class="ui right aligned ellipsis header">

@@ -182,7 +182,7 @@ legend {
 .ui.card>.image,
 .ui.card>.image>img
 {
-    height: 175px;
+    /*height: 175px;*/
 }
 
 .ui.card>.content {

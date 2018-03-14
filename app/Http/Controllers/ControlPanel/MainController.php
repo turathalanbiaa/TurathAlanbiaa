@@ -75,9 +75,14 @@ class MainController extends Controller
 
     public function logout(Request $request)
     {
+        $admin = Admin::where("session", $request->cookie("SESSION"))->first();
+        $admin->session = null;
+        $admin->save();
+
         $request->session()->remove("Admin_ID");
         $request->session()->remove("Name");
         $request->session()->remove("Username");
+        
         return redirect("/ControlPanel/login")->withCookie(cookie('SESSION' , null , -1));
     }
 }

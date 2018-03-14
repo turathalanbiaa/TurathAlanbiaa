@@ -7,14 +7,20 @@
                         <div class="content">
                             <div class="center">
                                 <a href="/release?id={{$release->id}}">
-                                    <h4 class="ui inverted header">{{$release->title}}</h4>
+                                    <h3 class="ui inverted header">{{$release->title}}</h3>
                                 </a>
 
-                                <button class="ui inverted small button">تحميل</button>
+                                <div class="ui hidden divider"></div>
+
+                                @if(is_null($release->file))
+                                    <div title="لايوجد" class="ui inverted small button">تحميل</div>
+                                @else
+                                    <a href="/release/download?id={{$release->id}}" class="ui inverted small button">تحميل</a>
+                                @endif
                             </div>
                         </div>
                     </div>
-                    <img src="{{asset("img/app.png")}}">
+                    <img src="{{asset("/storage/" . $release->Images[0]->image)}}">
                 </div>
             </div>
         </div>

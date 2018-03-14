@@ -11,7 +11,7 @@
             <div class="special-divider"></div>
         </div>
 
-        <div class="ui one column all-qamer-center-activities grid">
+        <div class="ui one column all-qamer-center-activity grid">
             <div class="column">
                 <div class="ui divided grid">
                     <div class="sixteen wide mobile eleven wide tablet eleven wide computer column">
