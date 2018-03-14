@@ -49,7 +49,7 @@
 
             <div class="three wide computer four wide tablet eight wide mobile column">
                 <i class="paste blue massive icon"></i>
-                <a class="ui fluid teal large button" href="">
+                <a class="ui fluid teal large button" href="/ControlPanel/release">
                     <span>الأصدارات</span>
                 </a>
             </div>

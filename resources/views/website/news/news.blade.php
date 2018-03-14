@@ -46,7 +46,7 @@
                             <div class="extra content">
                                 <span class="left floated">
                                     {{$news->date}}
-                                    <i class="calendar olive icon"></i>
+                                    <i class="calendar alternate olive icon"></i>
                                 </span>
 
                                 <span class="right floated">

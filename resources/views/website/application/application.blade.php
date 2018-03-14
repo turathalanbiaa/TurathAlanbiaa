@@ -13,8 +13,8 @@
             <div class="special-divider"></div>
         </div>
 
-        <div class="ui application grid">
-            <div class="ten wide column">
+        <div class="ui application divided grid">
+            <div class="ten wide computer ten wide tablet sixteen wide mobile column">
                 <div class="ui grid">
                     <div class="sixteen wide column">
                         <div class="ui middle aligned small right floated image">
@@ -25,7 +25,7 @@
                             <span>تطبيق - </span>
                             <span>{{$application->title}}</span>
                             <div class="sub header">
-                                <i class="calendar olive icon"></i>
+                                <i class="calendar alternate olive icon"></i>
                                 <span>{{$application->date}}</span>
                             </div>
                         </h2>
@@ -81,8 +81,32 @@
                 </div>
             </div>
 
-            <div class="six wide column">
-                show other apps
+            <div class="six wide computer six wide tablet sixteen wide mobile column">
+                <h3 class="ui right aligned inverted dividing header">
+                    <span>أحدث التطبيقات</span>
+                </h3>
+
+                <div class="ui list">
+                    @foreach($applications as $application)
+                        <div class="item">
+                            <div class="ui tiny image">
+                                <img src="{{asset("/storage/" . $application->Images[0]->image)}}">
+                            </div>
+
+                            <div class="content" style="padding: 0 7px 0 0;">
+                                <div class="ui yellow inverted header">
+                                    <span>تطبيق - </span>
+                                    <span>{{$application->title}}</span>
+                                    <div class="sub header">
+                                        <i class="calendar alternate olive icon"></i>
+                                        <span>{{$application->date}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>

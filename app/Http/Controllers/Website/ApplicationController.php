@@ -26,6 +26,10 @@ class ApplicationController extends Controller
             ->where("type", EventType::APPLICATIONS)
             ->firstOrfail();
 
-        return view("website.application.application")->with(["application"=>$application]);
+        $applications = Events::where("type", EventType::APPLICATIONS)
+            ->orderBy("date","DESC")
+            ->simplePaginate(12);
+
+        return view("website.application.application")->with(["applications"=>$applications, "application"=>$application]);
     }
 }

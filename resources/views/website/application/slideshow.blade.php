@@ -7,7 +7,7 @@
     <div class="slideshow-container">
         <!-- Full-width images with number and caption text -->
         @for ($i = 1; $i < $counts; $i++)
-            <div class="mySlides fade">
+            <div class="mySlides fadeIn animated">
                 <div class="numbertext"> {{$i}} / {{$counts-1}} </div>
                 <img src="{{asset("/storage/" . $application->Images[$i]->image)}}" style="width:100%">
                 {{--<div class="text">Caption Text</div>--}}

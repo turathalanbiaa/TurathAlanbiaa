@@ -21,7 +21,7 @@
                                 <h2 class="ui right aligned inverted dividing header">
                                     <span>{{$news->title}}</span>
                                     <div class="sub header">
-                                        <i class="ui calendar olive icon"></i>
+                                        <i class="ui calendar alternate olive icon"></i>
                                         <span>{{$news->date}}</span>
                                     </div>
                                 </h2>

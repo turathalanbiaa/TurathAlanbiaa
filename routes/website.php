@@ -14,11 +14,13 @@ Route::get("/qc-activity",'Website\\QamerCenterActivityController@singleActivity
 Route::get("/applications",'Website\\ApplicationController@applications');
 Route::get("/application",'Website\\ApplicationController@application');
 
-
-
-/*********************************************/
-Route::get("/all-releases",'Website\\ReleaseController@releases');
+Route::get("/releases",'Website\\ReleaseController@releases');
 Route::get("/release",'Website\\ReleaseController@singleRelease');
+Route::get("/release/download", 'Website\\ReleaseController@download');
+
+
+
+
 
 /*********************************************/
 Route::get("/studio",'Website\\StudioController@index');
