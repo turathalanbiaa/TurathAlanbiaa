@@ -17,11 +17,11 @@
             <div class="ten wide computer ten wide tablet sixteen wide mobile column">
                 <div class="ui grid">
                     <div class="sixteen wide column">
-                        <div class="ui middle aligned small right floated image">
+                        <div class="ui middle aligned right floated tiny image">
                             <img src="{{asset("/storage/" . $application->Images[0]->image)}}">
                         </div>
 
-                        <h2 class="ui inverted header">
+                        <h2 class="ui inverted header" style="margin-top: 14px;">
                             <span>تطبيق - </span>
                             <span>{{$application->title}}</span>
                             <div class="sub header">
@@ -33,10 +33,15 @@
 
                     <div class="sixteen wide column">
                         <p class="ui inverted header">{{$application->content}}</p>
+                        <div class="ui divider"></div>
                     </div>
 
                     <div class="sixteen wide column">
-                        @include("website.application.slideshow")
+                        <div class="ui center aligned grid">
+                            <div class="eight wide computer ten wide tablet fourteen wide mobile column">
+                                @include("website.application.slideshow")
+                            </div>
+                        </div>
                     </div>
 
                     @if(!is_null($application->videoLink))
@@ -82,27 +87,33 @@
             </div>
 
             <div class="six wide computer six wide tablet sixteen wide mobile column">
-                <h3 class="ui right aligned inverted dividing header">
+                <h3 class="ui right aligned inverted header">
                     <span>أحدث التطبيقات</span>
                 </h3>
+
+                <div class="ui  divider"></div>
+                <div class="ui hidden divider"></div>
+                <div class="ui hidden divider"></div>
 
                 <div class="ui list">
                     @foreach($applications as $application)
                         <div class="item">
-                            <div class="ui tiny image">
+                            <a class="ui middle aligned right floated tiny image" href="/application?id={{$application->id}}">
                                 <img src="{{asset("/storage/" . $application->Images[0]->image)}}">
-                            </div>
+                            </a>
 
-                            <div class="content" style="padding: 0 7px 0 0;">
-                                <div class="ui yellow inverted header">
-                                    <span>تطبيق - </span>
-                                    <span>{{$application->title}}</span>
-                                    <div class="sub header">
-                                        <i class="calendar alternate olive icon"></i>
-                                        <span>{{$application->date}}</span>
+                            <h3 class="ui inverted header" style="padding-top: 10px;">
+                                <a href="/application?id={{$application->id}}">
+                                    <div class="ui yellow header">
+                                        <span>تطبيق - </span>
+                                        <span>{{$application->title}}</span>
                                     </div>
+                                </a>
+                                <div class="sub header">
+                                    <i class="calendar alternate olive icon"></i>
+                                    <span>{{$application->date}}</span>
                                 </div>
-                            </div>
+                            </h3>
                         </div>
                         <div class="ui divider"></div>
                     @endforeach

@@ -1,4 +1,4 @@
-<div class="ui two column grid">
+<div class="ui three column grid">
     @foreach($applications as $application)
         <div class="column">
             <div class="ui fluid card">
@@ -20,7 +20,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="{{asset("img/app.png")}}">
+                    <img src="{{asset("/storage/" . $application->Images[0]->image)}}">
                 </div>
             </div>
         </div>

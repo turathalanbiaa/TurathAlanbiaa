@@ -13,7 +13,7 @@
             <div class="ui center aligned one column grid">
                 <div class="column">
                     <div class="ui small image">
-                        <img src="{{asset("/img/tur.png")}}">
+                        <img src="{{asset("/img/login-logo.png")}}">
                     </div>
                 </div>
             </div>

@@ -76,7 +76,7 @@ class MainController extends Controller
     }
 
     public static function specialStudent(){
-        $students = SpecialStudents::OrderBy("id","DESC")
+        $students = SpecialStudents::OrderBy("stars","DESC")
             ->take(9)
             ->get();
 

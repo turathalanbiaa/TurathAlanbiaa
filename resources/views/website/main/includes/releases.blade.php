@@ -1,4 +1,4 @@
-<div class="ui two column grid">
+<div class="ui four column grid">
     @foreach($releases as $release)
         <div class="column">
             <div class="ui fluid card">
