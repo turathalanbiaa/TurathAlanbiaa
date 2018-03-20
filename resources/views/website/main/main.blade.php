@@ -53,7 +53,7 @@
         <div class="ui one column section-student grid">
             <div class="column">
                 <fieldset>
-                    <legend>الطلبة المتميزين</legend>
+                    <legend>الطلبة المتميزون</legend>
 
                     <div class="ui one column student grid">
                         <div class="column">
