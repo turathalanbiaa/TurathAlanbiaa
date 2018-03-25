@@ -40,7 +40,6 @@
 
                             <div class="content">
                                 <div class="header">{{$news->title}}</div>
-                                <div class="description">{{$news->content}}</div>
                             </div>
 
                             <div class="extra content">

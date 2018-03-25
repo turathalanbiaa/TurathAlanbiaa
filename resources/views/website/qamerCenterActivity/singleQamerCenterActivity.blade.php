@@ -38,10 +38,7 @@
                                     <img src="{{asset("/storage/" . $activity->Images[0]->image)}}">
                                 </div>
 
-                                <?php $lines = explode(".",$activity->content); ?>
-                                @foreach($lines as $line)
-                                    <p class="line">{{$line}}</p>
-                                @endforeach
+                                <div>{!! $activity->content !!}</div>
 
                                 @if(!is_null($activity->externalLink))
                                     <p class="ui olive header">
@@ -105,5 +102,10 @@
             transition: 'fade up'
         });
         $('.ui.embed').embed();
+
+        var quill = new Quill('.ql-editor');
+        quill.enable(false);
+
+        $(".ql-tooltip").css("display","none");
     </script>
 @endsection

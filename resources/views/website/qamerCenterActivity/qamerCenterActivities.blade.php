@@ -40,7 +40,6 @@
 
                             <div class="content">
                                 <div class="header">{{$activity->title}}</div>
-                                <div class="description">{{$activity->content}}</div>
                             </div>
 
                             <div class="extra content">

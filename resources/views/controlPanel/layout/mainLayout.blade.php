@@ -15,7 +15,7 @@
     <link href="{{asset("css/animate.css")}}" rel="stylesheet" type="text/css">
     <link href="{{asset("css/styleCp.css")}}" rel="stylesheet" type="text/css">
     <link href="{{asset("css/snackbar.css")}}" rel="stylesheet" type="text/css">
-
+    <link href="{{asset("css/quill.snow.css")}}" rel="stylesheet" type="text/css">
 
     {{--JQuery--}}
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -23,11 +23,7 @@
     {{--Script--}}
     <script src="{{asset("js/semantic.min.js")}}"></script>
     <script src="{{asset("js/snackbar.js")}}"></script>
-
-    {{--OwlCarousel--}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="{{asset("js/quill.js")}}"></script>
 </head>
 
 <body>
@@ -35,28 +31,28 @@
     <div class="ui hidden divider"></div>
     <div class="ui hidden divider"></div>
 
-    <a class="item" href="">
+    <a class="item" href="/ControlPanel/news">
         <i class="globe brown icon"></i>
         <span>الأخبار</span>
     </a>
 
-    <a class="item" href="">
+    <a class="item" href="/ControlPanel/activities">
         <i class="chart pie pink icon"></i>
         <span>النشاطات</span>
     </a>
 
 
-    <a class="item" href="">
+    <a class="item" href="/ControlPanel/qcActivities">
         <i class="chart bar purple icon"></i>
         <span>نشاطات مركز القمر</span>
     </a>
 
-    <a class="item" href="">
+    <a class="item" href="/ControlPanel/applications">
         <i class="certificate violet icon"></i>
         <span>التطبيقات</span>
     </a>
 
-    <a class="item" href="">
+    <a class="item" href="/ControlPanel/releases">
         <i class="paste blue icon"></i>
         <span>الأصدارات</span>
     </a>

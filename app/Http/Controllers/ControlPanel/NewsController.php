@@ -27,7 +27,7 @@ class NewsController extends Controller
                 ->simplePaginate(25);
         } else {
             $news = Events::where("type",EventType::NEWS)
-                ->orderBy("date","DESC")
+                ->orderBy("id","DESC")
                 ->simplePaginate(25);
         }
 
@@ -77,7 +77,7 @@ class NewsController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'detail' => 'required',
-            'image' => 'required|file|image|min:0|max:250',
+            'image' => 'required|file|image|min:0|max:150',
             'images[]' => 'file|image',
             'date' => 'required'
         ], [

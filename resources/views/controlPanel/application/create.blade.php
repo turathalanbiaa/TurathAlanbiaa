@@ -52,9 +52,10 @@
                         <input type="date" name="date" id="date" value="{{old("date")}}">
                     </div>
 
-                    <div class="ten wide field">
-                        <label for="detail">التفاصيل</label>
-                        <textarea name="detail" id="detail" rows="15">{{old("detail")}}</textarea>
+                    <div class="ten wide field" style="text-align: left;">
+                        <label for="detail" style="text-align: right;">التفاصيل</label>
+                        <div id="detail" style="height: 500px; padding: 14px; overflow-y: scroll;"></div>
+                        <input type="hidden" name="detail">
                     </div>
 
                     <div class="ten wide field">
@@ -78,10 +79,23 @@
                         <input type="text" name="videoLink" id="videoLink" value="{{old("videoLink")}}">
                     </div>
 
-                    <button type="submit" class="ui teal button">ارسال</button>
+                    <button type="submit" class="ui teal button" id="send">ارسال</button>
                 </form>
             </div>
         </div>
     </div>
+@endsection
 
+@section("script")
+    <script>
+        var quill = new Quill('#detail', {
+            theme: 'snow'
+        });
+
+        quill.format('align', 'right');
+
+        $('#send').click(function () {
+            $("input[type='hidden'][name='detail']").val($('#detail').html());
+        });
+    </script>
 @endsection

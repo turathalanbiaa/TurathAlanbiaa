@@ -27,7 +27,7 @@ class ReleaseController extends Controller
                 ->simplePaginate(25);
         } else {
             $releases = Events::where("type",EventType::RELEASES)
-                ->orderBy("date","DESC")
+                ->orderBy("id","DESC")
                 ->simplePaginate(25);
         }
 

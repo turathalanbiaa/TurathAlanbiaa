@@ -14,13 +14,13 @@
 
         <div class="ui releases grid">
             @foreach($releases as $release)
-                <div class="sixteen wide mobile eight wide tablet eight wide computer column">
+                <div class="sixteen wide mobile sixteen wide tablet eight wide computer column">
                     <div class="ui release fluid card">
                         <div class="content">
                             <div class="cover">
                                 <div class="shape">
                                     <div class="perspective">
-                                        <img class="ui image" style="height: 100%" src="{{asset("/storage/" . $release->Images[0]->image)}}">
+                                        <img class="ui image" style="width: 100%; height: 100%;" src="{{asset("/storage/" . $release->Images[0]->image)}}">
                                     </div>
                                 </div>
                             </div>
@@ -31,7 +31,7 @@
                                         <i class="book olive icon" style="margin: 0"></i>
                                         {{$release->title}}
                                     </h4>
-                                    <p>{{$release->content}}</p>
+                                    <p>{!! $release->content !!}</p>
                                 </div>
 
                                 <div class="footer">
@@ -71,5 +71,10 @@
             pagination.css({'padding':'0','font-size':'14px'});
             pagination.find('li').addClass('item');
         });
+
+        var quill = new Quill('.ql-editor');
+        quill.enable(false);
+
+        $(".ql-tooltip").css("display","none");
     </script>
 @endsection

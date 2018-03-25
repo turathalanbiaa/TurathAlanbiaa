@@ -8,7 +8,7 @@
     <div class="ui segment">
         <div class="ui grid">
             <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
-                <form class="ui large form" method="get" action="/ControlPanel/release" dir="rtl">
+                <form class="ui large form" method="get" action="/ControlPanel/releases" dir="rtl">
                     <div class="sixteen wide field">
                         <div class="ui left icon input">
                             <input type="text" placeholder="بحث عن اصدار... " name="query" style="text-align: right;">
@@ -36,16 +36,32 @@
                     </thead>
 
                     <tbody>
-                    @foreach($releases as $release)
-                        <tr>
-                            <td class="center aligned">{{$release->id}}</td>
-                            <td class="right aligned">{{$release->title}}</td>
-                            <td class="center aligned">{{$release->date}}</td>
-                            <td class="center aligned">
-                                <button class="ui fluid red button" data-action="delete" data-id="{{$release->id}}">حذف</button>
-                            </td>
-                        </tr>
-                    @endforeach
+                        @if(count($releases) > 0)
+                            @foreach($releases as $release)
+                                <tr>
+                                    <td class="center aligned">{{$release->id}}</td>
+                                    <td class="right aligned">{{$release->title}}</td>
+                                    <td class="center aligned">{{$release->date}}</td>
+                                    <td class="center aligned">
+                                        <button class="ui fluid red button" data-action="delete" data-id="{{$release->id}}">حذف</button>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @else
+                            <tr>
+                                <td colspan="4">
+                                    <div class="ui center aligned header">
+                                        <div class="ui hidden divider"></div>
+                                        <div class="ui hidden divider"></div>
+                                        <div class="ui hidden divider"></div>
+                                        <span>لا توجد نتائج</span>
+                                        <div class="ui hidden divider"></div>
+                                        <div class="ui hidden divider"></div>
+                                        <div class="ui hidden divider"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endif
                     </tbody>
                 </table>
             </div>

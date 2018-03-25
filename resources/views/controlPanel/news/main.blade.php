@@ -36,16 +36,32 @@
                     </thead>
 
                     <tbody>
-                        @foreach($allNews as $news)
+                        @if(count($allNews) > 0)
+                            @foreach($allNews as $news)
+                                <tr>
+                                    <td class="center aligned">{{$news->id}}</td>
+                                    <td class="right aligned">{{$news->title}}</td>
+                                    <td class="center aligned">{{$news->date}}</td>
+                                    <td class="center aligned">
+                                        <button class="ui fluid red button" data-action="delete" data-id="{{$news->id}}">حذف</button>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @else
                             <tr>
-                                <td class="center aligned">{{$news->id}}</td>
-                                <td class="right aligned">{{$news->title}}</td>
-                                <td class="center aligned">{{$news->date}}</td>
-                                <td class="center aligned">
-                                    <button class="ui fluid red button" data-action="delete" data-id="{{$news->id}}">حذف</button>
+                                <td colspan="4">
+                                    <div class="ui center aligned header">
+                                        <div class="ui hidden divider"></div>
+                                        <div class="ui hidden divider"></div>
+                                        <div class="ui hidden divider"></div>
+                                        <span>لا توجد نتائج</span>
+                                        <div class="ui hidden divider"></div>
+                                        <div class="ui hidden divider"></div>
+                                        <div class="ui hidden divider"></div>
+                                    </div>
                                 </td>
                             </tr>
-                        @endforeach
+                        @endif
                     </tbody>
                 </table>
             </div>

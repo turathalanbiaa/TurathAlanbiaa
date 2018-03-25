@@ -27,7 +27,7 @@ class ApplicationController extends Controller
                 ->simplePaginate(25);
         } else {
             $applications = Events::where("type",EventType::APPLICATIONS)
-                ->orderBy("date","DESC")
+                ->orderBy("id","DESC")
                 ->simplePaginate(25);
         }
 

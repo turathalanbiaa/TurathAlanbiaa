@@ -27,21 +27,21 @@
 
             <div class="three wide computer four wide tablet eight wide mobile column">
                 <i class="chart pie pink massive icon"></i>
-                <a class="ui fluid teal large button" href="/ControlPanel/activity">
+                <a class="ui fluid teal large button" href="/ControlPanel/activities">
                     <span>النشاطات</span>
                 </a>
             </div>
 
             <div class="three wide computer four wide tablet eight wide mobile column">
                 <i class="chart bar purple massive icon"></i>
-                <a class="ui fluid teal large button" href="/ControlPanel/qcActivity">
+                <a class="ui fluid teal large button" href="/ControlPanel/qcActivities">
                     <span>نشاطات مركز القمر</span>
                 </a>
             </div>
 
             <div class="three wide computer four wide tablet eight wide mobile column">
                 <i class="certificate violet massive icon"></i>
-                <a class="ui fluid teal large button" href="/ControlPanel/application">
+                <a class="ui fluid teal large button" href="/ControlPanel/applications">
                     <span>التطبيقات</span>
                 </a>
             </div>
@@ -49,7 +49,7 @@
 
             <div class="three wide computer four wide tablet eight wide mobile column">
                 <i class="paste blue massive icon"></i>
-                <a class="ui fluid teal large button" href="/ControlPanel/release">
+                <a class="ui fluid teal large button" href="/ControlPanel/releases">
                     <span>الأصدارات</span>
                 </a>
             </div>

@@ -14,12 +14,14 @@
     <link href="{{asset("css/semantic.min.css")}}" rel="stylesheet" type="text/css">
     <link href="{{asset("css/animate.css")}}" rel="stylesheet" type="text/css">
     <link href="{{asset("css/style.css")}}" rel="stylesheet" type="text/css">
+    <link href="{{asset("css/quill.snow.css")}}" rel="stylesheet" type="text/css">
 
     {{--JQuery--}}
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     {{--Script--}}
     <script src="{{asset("js/semantic.min.js")}}"></script>
+    <script src="{{asset("js/quill.js")}}"></script>
 
     {{--OwlCarousel--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" />

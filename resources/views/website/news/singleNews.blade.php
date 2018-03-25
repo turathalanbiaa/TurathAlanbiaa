@@ -31,17 +31,14 @@
                                     <div class="ui divider"></div>
                                 @endif
 
-                                <div class="ui medium left floated image" id="news-image">
+                                <div class="ui medium left floated bordered image" id="news-image">
                                     <a class="ui left corner label" onclick="$('.ui.modal').modal('show');">
                                         <i class="zoom black icon"></i>
                                     </a>
                                     <img src="{{asset("/storage/" . $news->Images[0]->image)}}">
                                 </div>
 
-                                <?php $lines = explode(".",$news->content); ?>
-                                @foreach($lines as $line)
-                                    <p class="line">{{$line}}</p>
-                                @endforeach
+                                <div>{!! $news->content !!}</div>
 
                                 @if(!is_null($news->externalLink))
                                     <p class="ui olive header">
@@ -98,9 +95,16 @@
             if (w<992)
                 $("#news-image").removeClass("medium").addClass("small");
         });
+
         $(".ui.dropdown").dropdown({
             transition: 'fade up'
         });
+
         $('.ui.embed').embed();
+
+        var quill = new Quill('.ql-editor');
+        quill.enable(false);
+
+        $(".ql-tooltip").css("display","none");
     </script>
 @endsection
