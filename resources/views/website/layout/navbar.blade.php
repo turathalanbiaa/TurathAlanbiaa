@@ -15,7 +15,7 @@
                                     <p>الرئيسية</p>
                                 </a>
                             </div>
-                            
+
                             <div class="image">
                                 <a href="http://www.edu.turathalanbiaa.com" target="_blank">
                                     <img src="{{asset("/img/icons/1.png")}}" title="معهد تراث الأنبياء">
