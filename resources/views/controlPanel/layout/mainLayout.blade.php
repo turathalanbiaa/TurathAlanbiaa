@@ -11,11 +11,11 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
     {{--StyleSheet--}}
-    <link href="{{asset("css/semantic.min.css")}}" rel="stylesheet" type="text/css">
-    <link href="{{asset("css/animate.css")}}" rel="stylesheet" type="text/css">
-    <link href="{{asset("css/styleCp.css")}}" rel="stylesheet" type="text/css">
-    <link href="{{asset("css/snackbar.css")}}" rel="stylesheet" type="text/css">
-    <link href="{{asset("css/quill.snow.css")}}" rel="stylesheet" type="text/css">
+    <link href="{{asset("css/semantic.min.css?v=1")}}" rel="stylesheet" type="text/css">
+    <link href="{{asset("css/animate.css?v=1")}}" rel="stylesheet" type="text/css">
+    <link href="{{asset("css/style-cp.css?v=1")}}" rel="stylesheet" type="text/css">
+    <link href="{{asset("css/snackbar.css?v=1")}}" rel="stylesheet" type="text/css">
+    <link href="{{asset("css/quill.snow.css?v=1")}}" rel="stylesheet" type="text/css">
 
     {{--JQuery--}}
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
