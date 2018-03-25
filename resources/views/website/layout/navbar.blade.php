@@ -10,6 +10,13 @@
                     <div class="column">
                         <div class="ui special images">
                             <div class="image">
+                                <a href="/">
+                                    <img src="{{asset("/img/icons/12.png")}}" title="الرئيسية">
+                                    <p>الرئيسية</p>
+                                </a>
+                            </div>
+                            
+                            <div class="image">
                                 <a href="http://www.edu.turathalanbiaa.com" target="_blank">
                                     <img src="{{asset("/img/icons/1.png")}}" title="معهد تراث الأنبياء">
                                     <p>معهد تراث الأنبياء</p>
@@ -59,7 +66,7 @@
                             </div>
 
                             <div class="image">
-                                <a href="/studio">
+                                <a href="/">
                                     <img src="{{asset("/img/icons/8.png")}}" title="الأستوديو">
                                     <p>الأستوديو</p>
                                 </a>
@@ -81,16 +88,9 @@
                             </div>
 
                             <div class="image">
-                                <a href="/albums">
+                                <a href="/">
                                     <img src="{{asset("/img/icons/11.png")}}" title="البوم الصور">
                                     <p>البوم الصور</p>
-                                </a>
-                            </div>
-
-                            <div class="image">
-                                <a href="">
-                                    <img src="{{asset("/img/icons/12.png")}}" title="الأدارة">
-                                    <p>الأدارة</p>
                                 </a>
                             </div>
                         </div>
