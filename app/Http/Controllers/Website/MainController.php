@@ -76,8 +76,12 @@ class MainController extends Controller
     }
 
     public static function specialStudent(){
-        $students = SpecialStudents::OrderBy("stars","DESC")
-            ->take(9)
+        $month = date("n");
+        $year = date("Y");
+
+        $students = SpecialStudents::where("month", $month)
+            ->where("year", $year)
+            ->OrderBy("stars","DESC")
             ->get();
 
         return $students;

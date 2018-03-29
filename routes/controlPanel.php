@@ -36,3 +36,7 @@ Route::get("/ControlPanel/release/create", "ControlPanel\\ReleaseController@crea
 Route::post("/ControlPanel/release/create/validate", "ControlPanel\\ReleaseController@validation");
 /**********************************************************************************************************************/
 /**********************************************************************************************************************/
+Route::get("/ControlPanel/special-students", "ControlPanel\\SpecialStudentController@index");
+Route::post("/ControlPanel/special-student/delete", "ControlPanel\\SpecialStudentController@delete");
+Route::get("/ControlPanel/special-student/create", "ControlPanel\\SpecialStudentController@create");
+Route::post("/ControlPanel/special-student/create/validate", "ControlPanel\\SpecialStudentController@validation");
