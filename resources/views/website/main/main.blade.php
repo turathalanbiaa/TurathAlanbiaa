@@ -81,7 +81,7 @@
                 </fieldset>
 
                 <div class="section-releases-button">
-                    <a class="ui inverted basic tiny button" href="">عرض الكل</a>
+                    <a class="ui inverted basic tiny button" href="/releases">عرض الكل</a>
                 </div>
             </div>
 

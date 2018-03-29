@@ -13,7 +13,7 @@
     {{--StyleSheet--}}
     <link href="{{asset("css/semantic.min.css")}}" rel="stylesheet" type="text/css">
     <link href="{{asset("css/animate.css")}}" rel="stylesheet" type="text/css">
-    <link href="{{asset("css/style.css")}}" rel="stylesheet" type="text/css">
+    <link href="{{asset("css/style.css?v=1")}}" rel="stylesheet" type="text/css">
     <link href="{{asset("css/quill.snow.css")}}" rel="stylesheet" type="text/css">
 
     {{--JQuery--}}
