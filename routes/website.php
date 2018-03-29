@@ -19,4 +19,4 @@ Route::get("/release/download", 'Website\\ReleaseController@download');
 
 /*********************************************/
 Route::get("/studio",'Website\\StudioController@index');
-Route::get("/albums",'Website\\AlbumController@index');
+Route::get("/management",'Website\\ManagementController@index');

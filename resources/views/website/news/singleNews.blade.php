@@ -73,10 +73,10 @@
                         </div>
                     </div>
                 </div>
-
-                @include("website.layout.footer")
             </div>
         </div>
+
+        @include("website.layout.footer")
     </div>
 @endsection
 

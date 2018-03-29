@@ -68,6 +68,8 @@
                 </div>
             @endif
         </div>
+
+        @include("website.layout.footer")
     </div>
 @endsection
 

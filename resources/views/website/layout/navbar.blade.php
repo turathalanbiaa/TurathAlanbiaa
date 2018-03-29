@@ -89,8 +89,8 @@
 
                             <div class="image">
                                 <a href="/">
-                                    <img src="{{asset("/img/icons/11.png")}}" title="البوم الصور">
-                                    <p>البوم الصور</p>
+                                    <img src="{{asset("/img/icons/11.png")}}" title="الأدارة">
+                                    <p>الأدارة</p>
                                 </a>
                             </div>
                         </div>
