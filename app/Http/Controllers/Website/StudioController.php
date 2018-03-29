@@ -7,5 +7,8 @@ use App\Http\Controllers\Controller;
 
 class StudioController extends Controller
 {
-    //
+    public function index()
+    {
+        return view("website.studio.studio");
+    }
 }

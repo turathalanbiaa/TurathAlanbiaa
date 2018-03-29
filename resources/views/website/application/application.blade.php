@@ -32,7 +32,7 @@
                     </div>
 
                     <div class="sixteen wide column">
-                        <p class="ui inverted header">{{$application->content}}</p>
+                        <p class="ui inverted header">{!! $application->content !!}</p>
                         <div class="ui divider"></div>
                     </div>
 
@@ -120,6 +120,8 @@
                 </div>
             </div>
         </div>
+
+        @include("website.layout.footer")
     </div>
 @endsection
 
@@ -127,5 +129,12 @@
     <script src="{{asset("/js/slideshow.js")}}"></script>
     <script>
         $(".ui.embed").embed();
+
+        $(document).ready(function () {
+            var quill = new Quill('.ql-editor');
+            quill.enable(false);
+
+            $(".ql-tooltip").css("display","none");
+        });
     </script>
 @endsection

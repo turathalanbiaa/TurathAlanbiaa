@@ -77,6 +77,8 @@
                 @include("website.layout.footer")
             </div>
         </div>
+
+        @include("website.layout.footer")
     </div>
 @endsection
 
@@ -95,14 +97,18 @@
             if (w<992)
                 $("#activity-image-image").removeClass("medium").addClass("small");
         });
+
         $(".ui.dropdown").dropdown({
             transition: 'fade up'
         });
+
         $('.ui.embed').embed();
 
-        var quill = new Quill('.ql-editor');
-        quill.enable(false);
+        $(document).ready(function () {
+            var quill = new Quill('.ql-editor');
+            quill.enable(false);
 
-        $(".ql-tooltip").css("display","none");
+            $(".ql-tooltip").css("display","none");
+        });
     </script>
 @endsection

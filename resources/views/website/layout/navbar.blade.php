@@ -66,7 +66,7 @@
                             </div>
 
                             <div class="image">
-                                <a href="/">
+                                <a href="/studio">
                                     <img src="{{asset("/img/icons/8.png")}}" title="الأستوديو">
                                     <p>الأستوديو</p>
                                 </a>
@@ -88,7 +88,7 @@
                             </div>
 
                             <div class="image">
-                                <a href="/">
+                                <a href="/management">
                                     <img src="{{asset("/img/icons/11.png")}}" title="الأدارة">
                                     <p>الأدارة</p>
                                 </a>

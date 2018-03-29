@@ -68,6 +68,8 @@
                 </div>
             @endif
         </div>
+
+        @include("website.layout.footer")
     </div>
 @endsection
 
@@ -97,9 +99,11 @@
                 console.log("Mobile Device");
             }
         });
+
         $('.ui.dropdown').dropdown({
             transition: 'fade up'
         });
+
         $(document).ready(function () {
             var pagination = $(".pagination");
             pagination.removeClass("pagination").addClass("ui right aligned pagination olive menu");

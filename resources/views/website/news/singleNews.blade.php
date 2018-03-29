@@ -102,9 +102,10 @@
 
         $('.ui.embed').embed();
 
-        var quill = new Quill('.ql-editor');
-        quill.enable(false);
-
-        $(".ql-tooltip").css("display","none");
+        $(document).ready(function () {
+            var quill = new Quill('.ql-editor');
+            quill.enable(false);
+            $(".ql-tooltip").css("display","none");
+        });
     </script>
 @endsection

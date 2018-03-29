@@ -99,9 +99,11 @@
                 console.log("Mobile Device");
             }
         });
+
         $('.ui.dropdown').dropdown({
             transition: 'fade up'
         });
+
         $(document).ready(function () {
             var pagination = $(".pagination");
             pagination.removeClass("pagination").addClass("ui pagination olive menu");
