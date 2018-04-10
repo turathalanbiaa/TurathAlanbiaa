@@ -8,19 +8,19 @@
 </style>
 <div class="ui center aligned one column footer grid">
     <div class="column">
-        <a href="https://www.facebook.com/turathalanbiaa" class="ui facebook button">
+        <a href="https://www.facebook.com/turathalanbiaa" class="ui facebook button" target="_blank">
             <i class="facebook f icon"></i>
         </a>
 
-        <a href="https://www.twitter.com/turathalanbiaa" class="ui twitter button">
+        <a href="https://www.twitter.com/turathalanbiaa" class="ui twitter button" target="_blank">
             <i class="twitter icon"></i>
         </a>
 
-        <a href="https://www.instagram.org/turathalanbiaa" class="ui instagram button">
+        <a href="https://www.instagram.org/turathalanbiaa" class="ui instagram button" target="_blank">
             <i class="instagram icon"></i>
         </a>
 
-        <a href="https://www.youtube.com/turathalanbiaa" class="ui youtube button">
+        <a href="https://www.youtube.com/turathalanbiaa" class="ui youtube button" target="_blank">
             <i class="youtube icon"></i>
         </a>
 

@@ -56,21 +56,21 @@
 
             <div class="three wide computer four wide tablet eight wide mobile column">
                 <i class="question grey massive icon"></i>
-                <a class="ui fluid teal large button" href="">
+                <a class="ui fluid teal large button" href="/ControlPanel/faqs">
                     <span>الأسئلة الشائعه</span>
                 </a>
             </div>
 
             <div class="three wide computer four wide tablet eight wide mobile column">
                 <i class="pencil alternate green massive icon"></i>
-                <a class="ui fluid teal large button" href="">
+                <a class="ui fluid teal large button" href="/ControlPanel/masaels">
                     <span>الأجوبة الميسرة</span>
                 </a>
             </div>
 
             <div class="three wide computer four wide tablet eight wide mobile column">
                 <i class="video olive massive icon"></i>
-                <a class="ui fluid teal large button" href="">
+                <a class="ui fluid teal large button" href="/ControlPanel/videos">
                     <span>الأستوديو</span>
                 </a>
             </div>

@@ -17,6 +17,6 @@ Route::get("/application",'Website\\ApplicationController@application');
 Route::get("/releases",'Website\\ReleaseController@releases');
 Route::get("/release/download", 'Website\\ReleaseController@download');
 
-/*********************************************/
 Route::get("/studio",'Website\\StudioController@index');
+
 Route::get("/management",'Website\\ManagementController@index');

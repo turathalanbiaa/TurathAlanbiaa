@@ -14,32 +14,60 @@
 
         <div class="ui one column studio grid">
             <div class="column">
-                <div class="ui center aligned grid">
-                    <div class="ten wide computer sixteen wide tablet sixteen wide mobile column">
-                        <div class="ui embed" data-source="youtube" data-id="yu-KS7Q4-FQ" data-placeholder="{{asset("/img/studio.png")}}"></div>
+                @if(!is_null($showItem))
+                    <div class="ui center aligned grid">
+                        <div class="ten wide computer fourteen wide tablet sixteen wide mobile column">
+                            <div class="ui embed" data-source="youtube" data-id="{{$showItem->videoLink}}" data-placeholder="{{asset("/img/studio.png")}}"></div>
+                        </div>
                     </div>
-                </div>
+                @endif
             </div>
 
             <div class="column">
-                <div class="ui grid">
-                    <div class="eight wide computer eight wide tablet sixteen wide mobile column">
-                        <div class="ui embed" data-source="youtube" data-id="jKiiM36FwxU" data-placeholder="{{asset("/img/studio.png")}}"></div>
-                    </div>
+                <div class="ui right aligned inverted dividing header">احدث الفيديوهات</div>
 
-                    <div class="eight wide computer eight wide tablet sixteen wide mobile column">
-                        <div class="ui embed" data-source="youtube" data-id="YTDJ24avln4" data-placeholder="{{asset("/img/studio.png")}}"></div>
-                    </div>
+                <div class="ui three column computer only grid">
+                    @foreach($items as $item)
+                        <div class="column">
+                            <div class="ui fluid studio card">
+                                <div class="content">
+                                    <a href="/studio?id={{$item->id}}">{{$item->title}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
 
-                    <div class="eight wide computer eight wide tablet sixteen wide mobile column">
-                        <div class="ui embed" data-source="youtube" data-id="bd_Q9dbIzZs" data-placeholder="{{asset("/img/studio.png")}}"></div>
-                    </div>
+                <div class="ui two column tablet only grid">
+                    @foreach($items as $item)
+                        <div class="column">
+                            <div class="ui fluid studio card">
+                                <div class="content">
+                                    <a href="/studio?id={{$item->id}}">{{$item->title}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
 
-                    <div class="eight wide computer eight wide tablet sixteen wide mobile column">
-                        <div class="ui embed" data-source="youtube" data-id="I5SgvFmlVmg" data-placeholder="{{asset("/img/studio.png")}}"></div>
-                    </div>
+                <div class="ui one column mobile only grid">
+                    @foreach($items as $item)
+                        <div class="column">
+                            <div class="ui fluid studio card">
+                                <div class="content">
+                                    <a href="/studio?id={{$item->id}}">{{$item->title}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
+
+            @if($items->hasPages())
+                <div class="ui center aligned column">
+                    {{$items->links()}}
+                </div>
+            @endif
         </div>
 
         @include("website.layout.footer")
@@ -48,6 +76,14 @@
 
 @section("script")
     <script>
-        $('.ui.embed').embed();
+        $(".ui.embed").embed();
+
+        $(document).ready(function () {
+            var pagination = $(".pagination");
+            pagination.removeClass("pagination").addClass("ui pagination olive menu");
+            // $('.pagination').addClass('ui right aligned pagination olive menu');
+            pagination.css({'padding':'0','font-size':'14px'});
+            pagination.find('li').addClass('item');
+        });
     </script>
 @endsection

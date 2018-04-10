@@ -1,8 +1,8 @@
 <div class="ui four column grid">
     @foreach($releases as $release)
         <div class="column">
-            <div class="ui fluid card" style="height: 275px;">
-                <div class="blurring dimmable image" style="height: 275px;">
+            <div class="ui fluid card">
+                <div class="blurring dimmable image">
                     <div class="ui dimmer">
                         <div class="content">
                             <div class="center">
@@ -20,7 +20,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="{{asset("/storage/" . $release->Images[0]->image)}}" style="height: 275px;">
+                    <img src="{{asset("/storage/" . $release->Images[0]->image)}}">
                 </div>
             </div>
         </div>

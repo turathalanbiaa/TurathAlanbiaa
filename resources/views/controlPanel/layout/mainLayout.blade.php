@@ -57,17 +57,17 @@
         <span>الأصدارات</span>
     </a>
 
-    <a class="item" href="">
+    <a class="item" href="/ControlPanel/faqs">
         <i class="question grey icon"></i>
         <span>الأسئلة الشائعه</span>
     </a>
 
-    <a class="item" href="">
+    <a class="item" href="/ControlPanel/masaels">
         <i class="pencil alternate green icon"></i>
         <span>الأجوبة الميسرة</span>
     </a>
 
-    <a class="item" href="">
+    <a class="item" href="/ControlPanel/videos">
         <i class="video olive icon"></i>
         <span>الأستوديو</span>
     </a>

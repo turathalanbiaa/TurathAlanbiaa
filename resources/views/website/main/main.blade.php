@@ -69,7 +69,7 @@
         </div>
 
         <div class="ui section-application-releases grid">
-            <div class="sixteen wide computer sixteen wide tablet sixteen wide mobile column">
+            <div class="eight wide computer sixteen wide tablet sixteen wide mobile column">
                 <fieldset class="releases">
                     <legend>الأصدارات</legend>
 
@@ -85,7 +85,7 @@
                 </div>
             </div>
 
-            <div class="eight wide computer sixteen wide tablet sixteen wide mobile column" style="display: none;">
+            <div class="eight wide computer sixteen wide tablet sixteen wide mobile column">
                 <fieldset class="application">
                     <legend>التطبيقات</legend>
 

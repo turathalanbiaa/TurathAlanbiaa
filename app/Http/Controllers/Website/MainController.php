@@ -89,7 +89,7 @@ class MainController extends Controller
 
     public static function faqQuestions()
     {
-        $questions = FAQ::orderBy("id","DESC")
+        $questions = FAQ::orderBy("id","ASC")
             ->take(10)
             ->get();
 
