@@ -20,3 +20,10 @@ Route::get("/release/download", 'Website\\ReleaseController@download');
 Route::get("/studio",'Website\\StudioController@index');
 
 Route::get("/management",'Website\\ManagementController@index');
+
+
+
+
+Route::get('/lesson/{id}', function ($id) {
+    return redirect('http://edu.turathalanbiaa.com/lesson/' . $id);
+});
