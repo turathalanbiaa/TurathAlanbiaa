@@ -46,8 +46,8 @@
 
                             <div class="image">
                                 <a href="http://aqlam.turathalanbiaa.com" target="_blank">
-                                    <img src="{{asset("/img/icons/5.png")}}" title="أقلام">
-                                    <p>أقلام</p>
+                                    <img src="{{asset("/img/icons/5.png")}}" title="مدونة الكفيل">
+                                    <p>مدونة الكفيل</p>
                                 </a>
                             </div>
 
