@@ -16,11 +16,11 @@
             <i class="twitter icon"></i>
         </a>
 
-        <a href="https://www.instagram.org/turathalanbiaa" class="ui instagram button" target="_blank">
+        <a href="https://www.instagram.com/turathalanbiaa/" class="ui instagram button" target="_blank">
             <i class="instagram icon"></i>
         </a>
 
-        <a href="https://www.youtube.com/turathalanbiaa" class="ui youtube button" target="_blank">
+        <a href="https://www.youtube.com/channel/UCV0xdl7t1xR44mv1G6cQxEg" class="ui youtube button" target="_blank">
             <i class="youtube icon"></i>
         </a>
 
