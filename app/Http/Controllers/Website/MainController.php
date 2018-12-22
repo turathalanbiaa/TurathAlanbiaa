@@ -39,7 +39,7 @@ class MainController extends Controller
     {
         $activities = Events::where("type",EventType::ACTIVITIES)
             ->orderBy("id","DESC")
-            ->take(10)
+            ->take(15)
             ->get();
 
         return $activities;
@@ -49,7 +49,7 @@ class MainController extends Controller
     {
         $qamerCenterActivities = Events::where("type",EventType::QAMER_CENTER_ACTIVITIES)
             ->orderBy("id","DESC")
-            ->take(10)
+            ->take(15)
             ->get();
 
         return $qamerCenterActivities;
@@ -59,7 +59,7 @@ class MainController extends Controller
     {
         $applications = Events::where("type",EventType::APPLICATIONS)
             ->orderBy("id","DESC")
-            ->take(4)
+            ->take(6)
             ->get();
 
         return $applications;
