@@ -12,7 +12,7 @@
             <i class="instagram icon"></i>
         </a>
 
-        <a href="https://www.youtube.com/turathalanbiaa" class="ui youtube button">
+        <a href="https://www.youtube.com/channel/UCV0xdl7t1xR44mv1G6cQxEg" class="ui youtube button">
             <i class="youtube icon"></i>
         </a>
 
