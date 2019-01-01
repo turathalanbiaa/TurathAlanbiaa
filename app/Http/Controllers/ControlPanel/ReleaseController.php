@@ -77,7 +77,7 @@ class ReleaseController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'detail' => 'required',
-            'image' => 'required|file|image|min:0|max:100',
+            'image' => 'required|file|image|min:0|max:250',
             'file' => 'file|mimes:doc,pdf,docx',
             'date' => 'required'
         ], [
@@ -85,9 +85,9 @@ class ReleaseController extends Controller
             'detail.required' => 'يرجى أدخال بعض التفاصيل حول الاصدار.',
             'image.required' => 'يرجى رفع Logo الاصدار.',
             'image.file' => 'يرجى رفع Logo الاصدار.',
-            'image.image' => 'انت تحاول رفع ملف ليس بصورة.',
-            'image.min' => 'انت تقوم برفع ملف صغير جداً.',
-            'image.max' => 'حجم الملف يجب ان لايتعدى 100KB.',
+            'image.image' => 'انت تحاول رفع صورة(Logo) ليس بصورة.',
+            'image.min' => 'انت تقوم برفع صورة صغيرة جداً.',
+            'image.max' => 'حجم الصورة يجب ان لايتعدى 250KB.',
             'file.file' => 'انت تحاول رفع ملف ليس (doc,docx,pdf).',
             'file.mimes' => 'انت تحاول رفع ملف ليس (doc,docx,pdf).',
             'date.required' => 'يرجى ملئ حقل التأريخ.',
