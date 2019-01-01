@@ -69,7 +69,7 @@ class MainController extends Controller
     {
         $releases = Events::where("type",EventType::RELEASES)
             ->orderBy("id","DESC")
-            ->take(4)
+            ->take(8)
             ->get();
 
         return $releases;
